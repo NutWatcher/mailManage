@@ -1,0 +1,22 @@
+/**
+ * Created by lyy on 13-12-25.
+ */
+var Db = require('./baseDao') ;
+exports.insertBatch = function(fileName ,cb ){
+    Db.queryDb("INSERT INTO `tbatchfile` (`cBatchFileName`) VALUES ('"+ fileName +"');",cb);
+}
+exports.insertMail = function(mails ,cb ){
+    var str = "INSERT INTO `mailinfo` ( `mailAccount`, `mailCountry`, `mailWeight`, `packageId`, `batchId`) VALUES " ;
+    for (var i = 0 ; i < mails.length ; i ++ ){
+        if (i != 0){
+            str += ",";
+        }
+        str += "('"+ mails[i].mailAccount +"', '"+ mails[i].countroy +"', '"+ mails[i].weight +"', '0', '"+ mails[i].idBatchFile +"')" ;
+    }
+    str += ";";
+    Db.queryDb(str,cb);
+}
+exports.getBatchId = function(fileName ,cb ){
+    var str = " SELECT idtBatchFile FROM test.tbatchfile where cBatchFileName = '"+ fileName +"'" ;
+    Db.queryDb(str,cb);
+}

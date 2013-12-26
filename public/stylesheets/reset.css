@@ -1,0 +1,78 @@
+/***初始化*****/
+body, ul, ol, li, dl, dd, p, h1, h2, h3, h4, h5, h6, form, button, input, textarea, th, td, select, input {
+    margin: 0;
+}
+
+body {
+    font: 12px/1.5 '宋体', tahoma, Srial, helvetica, sans-serif;
+    background: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+/**border-collapse:collapse属性为表格设置合并边框，border-spacing:0属性设置相邻单元格的边框间的距离（仅用于“边框分离”模式）**/
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/**初始拥有padding属性的，仅 body、ul、ol、th、td、textarea、option、dd 标签具有**/
+body, th, td, textarea, option, ul, ol, dd {
+    padding: 0;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:link {
+    color: #333;
+}
+
+/**链接样式**/
+a:visited {
+    color: #333;
+}
+
+/**链接访问后样式**/
+a:hover {
+    color: #60387f;
+}
+
+/**链接移上时样式**/
+a:active {
+    color: #60387f;
+}
+
+/**链接点住不放时样式**/
+img, input {
+    border: 1;
+}
+
+/**清除浮动，严格来说是闭合浮动，添加在父级中**/
+.clearFix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+.clearFix {
+    *zoom: 1;
+}
+
+/**清除浮动，一般方法，创建新标签配合使用**/
+.clear {
+    clear: both;
+}
+
+/*****end*****/
