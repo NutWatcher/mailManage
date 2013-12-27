@@ -14,13 +14,17 @@
             $("#toCompare").on("click",function(){
                 $.ajax({
                     method: "POST",
-                    url: "./stateCompare",
+                    url: "../stateCompare",
                     data: {
                         textIn: $("#textIn").val()
                     },
                     success: function (msg) {
                         if (msg.success == true) {
-                            $("#textOut").val(msg.data);
+                            var strOut = ""
+                            for (var i = 0 ; i < msg.data.length ; i ++ ){
+                                strOut += msg.data[i].compareStr + "……" + msg.data[i].compareValue + "\n" ;
+                            }
+                            $("#textOut").val(strOut);
                             $("#pInfo").text("比对完成!!!");
                         }
                         else {

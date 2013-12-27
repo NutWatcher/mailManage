@@ -115,3 +115,148 @@ log start
 数据库初始化完成！2013-12-27 17:01:10.026
 [ 'create table if not exists `tBatchFile` (`idtBatchFile` INT NOT NULL AUTO_INCREMENT,`cBatchFileName` VARCHAR(255) NULL , PRIMARY KEY (`idtBatchFile`) ,UNIQUE INDEX `cBatchFileName_UNIQUE` (`cBatchFileName` ASC) );',
   'CREATE TABLE if not exists `mailinfo` (`idmailInfo` int(11) NOT NULL AUTO_INCREMENT,`mailAccount` varchar(45) NOT NULL,`mailCountry` varchar(45) NOT NULL,`mailWeight` varchar(45) NOT NULL,`packageId` int(11) NOT NULL,`batchId` int(11) NOT NULL,PRIMARY KEY (`idmailInfo`),UNIQUE KEY `mailAccount_UNIQUE` (`mailAccount`))' ]
+log start
+数据库初始化完成！2013-12-27 19:48:33.203
+数据库初始化完成！2013-12-27 19:48:33.205
+[ 'create table if not exists `tBatchFile` (`idtBatchFile` INT NOT NULL AUTO_INCREMENT,`cBatchFileName` VARCHAR(255) NULL , PRIMARY KEY (`idtBatchFile`) ,UNIQUE INDEX `cBatchFileName_UNIQUE` (`cBatchFileName` ASC) );',
+  'CREATE TABLE if not exists `mailinfo` (`idmailInfo` int(11) NOT NULL AUTO_INCREMENT,`mailAccount` varchar(45) NOT NULL,`mailCountry` varchar(45) NOT NULL,`mailWeight` varchar(45) NOT NULL,`packageId` int(11) NOT NULL,`batchId` int(11) NOT NULL,PRIMARY KEY (`idmailInfo`),UNIQUE KEY `mailAccount_UNIQUE` (`mailAccount`))' ]
+log start
+数据库初始化完成！2013-12-27 19:49:17.831
+数据库初始化完成！2013-12-27 19:49:17.832
+[ 'create table if not exists `tBatchFile` (`idtBatchFile` INT NOT NULL AUTO_INCREMENT,`cBatchFileName` VARCHAR(255) NULL , PRIMARY KEY (`idtBatchFile`) ,UNIQUE INDEX `cBatchFileName_UNIQUE` (`cBatchFileName` ASC) );',
+  'CREATE TABLE if not exists `mailinfo` (`idmailInfo` int(11) NOT NULL AUTO_INCREMENT,`mailAccount` varchar(45) NOT NULL,`mailCountry` varchar(45) NOT NULL,`mailWeight` varchar(45) NOT NULL,`packageId` int(11) NOT NULL,`batchId` int(11) NOT NULL,PRIMARY KEY (`idmailInfo`),UNIQUE KEY `mailAccount_UNIQUE` (`mailAccount`))' ]
+log start
+数据库初始化完成！2013-12-27 19:49:59.503
+数据库初始化完成！2013-12-27 19:49:59.505
+[ 'create table if not exists `tBatchFile` (`idtBatchFile` INT NOT NULL AUTO_INCREMENT,`cBatchFileName` VARCHAR(255) NULL , PRIMARY KEY (`idtBatchFile`) ,UNIQUE INDEX `cBatchFileName_UNIQUE` (`cBatchFileName` ASC) );',
+  'CREATE TABLE if not exists `mailinfo` (`idmailInfo` int(11) NOT NULL AUTO_INCREMENT,`mailAccount` varchar(45) NOT NULL,`mailCountry` varchar(45) NOT NULL,`mailWeight` varchar(45) NOT NULL,`packageId` int(11) NOT NULL,`batchId` int(11) NOT NULL,PRIMARY KEY (`idmailInfo`),UNIQUE KEY `mailAccount_UNIQUE` (`mailAccount`))' ]
+log start
+数据库初始化完成！2013-12-27 19:50:25.375
+数据库初始化完成！2013-12-27 19:50:25.377
+[ 'create table if not exists `tBatchFile` (`idtBatchFile` INT NOT NULL AUTO_INCREMENT,`cBatchFileName` VARCHAR(255) NULL , PRIMARY KEY (`idtBatchFile`) ,UNIQUE INDEX `cBatchFileName_UNIQUE` (`cBatchFileName` ASC) );',
+  'CREATE TABLE if not exists `mailinfo` (`idmailInfo` int(11) NOT NULL AUTO_INCREMENT,`mailAccount` varchar(45) NOT NULL,`mailCountry` varchar(45) NOT NULL,`mailWeight` varchar(45) NOT NULL,`packageId` int(11) NOT NULL,`batchId` int(11) NOT NULL,PRIMARY KEY (`idmailInfo`),UNIQUE KEY `mailAccount_UNIQUE` (`mailAccount`))' ]
+log start
+数据库初始化完成！2013-12-27 19:51:07.782
+数据库初始化完成！2013-12-27 19:51:07.784
+[ 'create table if not exists `tBatchFile` (`idtBatchFile` INT NOT NULL AUTO_INCREMENT,`cBatchFileName` VARCHAR(255) NULL , PRIMARY KEY (`idtBatchFile`) ,UNIQUE INDEX `cBatchFileName_UNIQUE` (`cBatchFileName` ASC) );',
+  'CREATE TABLE if not exists `mailinfo` (`idmailInfo` int(11) NOT NULL AUTO_INCREMENT,`mailAccount` varchar(45) NOT NULL,`mailCountry` varchar(45) NOT NULL,`mailWeight` varchar(45) NOT NULL,`packageId` int(11) NOT NULL,`batchId` int(11) NOT NULL,PRIMARY KEY (`idmailInfo`),UNIQUE KEY `mailAccount_UNIQUE` (`mailAccount`))' ]
+log start
+数据库初始化完成！2013-12-27 19:51:19.949
+数据库初始化完成！2013-12-27 19:51:19.951
+[ 'create table if not exists `tBatchFile` (`idtBatchFile` INT NOT NULL AUTO_INCREMENT,`cBatchFileName` VARCHAR(255) NULL , PRIMARY KEY (`idtBatchFile`) ,UNIQUE INDEX `cBatchFileName_UNIQUE` (`cBatchFileName` ASC) );',
+  'CREATE TABLE if not exists `mailinfo` (`idmailInfo` int(11) NOT NULL AUTO_INCREMENT,`mailAccount` varchar(45) NOT NULL,`mailCountry` varchar(45) NOT NULL,`mailWeight` varchar(45) NOT NULL,`packageId` int(11) NOT NULL,`batchId` int(11) NOT NULL,PRIMARY KEY (`idmailInfo`),UNIQUE KEY `mailAccount_UNIQUE` (`mailAccount`))' ]
+log start
+数据库初始化完成！2013-12-27 19:56:22.766
+数据库初始化完成！2013-12-27 19:56:22.768
+[ 'create table if not exists `tBatchFile` (`idtBatchFile` INT NOT NULL AUTO_INCREMENT,`cBatchFileName` VARCHAR(255) NULL , PRIMARY KEY (`idtBatchFile`) ,UNIQUE INDEX `cBatchFileName_UNIQUE` (`cBatchFileName` ASC) );',
+  'CREATE TABLE if not exists `mailinfo` (`idmailInfo` int(11) NOT NULL AUTO_INCREMENT,`mailAccount` varchar(45) NOT NULL,`mailCountry` varchar(45) NOT NULL,`mailWeight` varchar(45) NOT NULL,`packageId` int(11) NOT NULL,`batchId` int(11) NOT NULL,PRIMARY KEY (`idmailInfo`),UNIQUE KEY `mailAccount_UNIQUE` (`mailAccount`))' ]
+log start
+数据库初始化完成！2013-12-27 19:57:29.886
+数据库初始化完成！2013-12-27 19:57:29.888
+[ 'create table if not exists `tBatchFile` (`idtBatchFile` INT NOT NULL AUTO_INCREMENT,`cBatchFileName` VARCHAR(255) NULL , PRIMARY KEY (`idtBatchFile`) ,UNIQUE INDEX `cBatchFileName_UNIQUE` (`cBatchFileName` ASC) );',
+  'CREATE TABLE if not exists `mailinfo` (`idmailInfo` int(11) NOT NULL AUTO_INCREMENT,`mailAccount` varchar(45) NOT NULL,`mailCountry` varchar(45) NOT NULL,`mailWeight` varchar(45) NOT NULL,`packageId` int(11) NOT NULL,`batchId` int(11) NOT NULL,PRIMARY KEY (`idmailInfo`),UNIQUE KEY `mailAccount_UNIQUE` (`mailAccount`))' ]
+log start
+数据库初始化完成！2013-12-27 19:59:21.551
+数据库初始化完成！2013-12-27 19:59:21.554
+[ 'create table if not exists `tBatchFile` (`idtBatchFile` INT NOT NULL AUTO_INCREMENT,`cBatchFileName` VARCHAR(255) NULL , PRIMARY KEY (`idtBatchFile`) ,UNIQUE INDEX `cBatchFileName_UNIQUE` (`cBatchFileName` ASC) );',
+  'CREATE TABLE if not exists `mailinfo` (`idmailInfo` int(11) NOT NULL AUTO_INCREMENT,`mailAccount` varchar(45) NOT NULL,`mailCountry` varchar(45) NOT NULL,`mailWeight` varchar(45) NOT NULL,`packageId` int(11) NOT NULL,`batchId` int(11) NOT NULL,PRIMARY KEY (`idmailInfo`),UNIQUE KEY `mailAccount_UNIQUE` (`mailAccount`))' ]
+log start
+数据库初始化完成！2013-12-27 20:01:03.352
+数据库初始化完成！2013-12-27 20:01:03.353
+[ 'create table if not exists `tBatchFile` (`idtBatchFile` INT NOT NULL AUTO_INCREMENT,`cBatchFileName` VARCHAR(255) NULL , PRIMARY KEY (`idtBatchFile`) ,UNIQUE INDEX `cBatchFileName_UNIQUE` (`cBatchFileName` ASC) );',
+  'CREATE TABLE if not exists `mailinfo` (`idmailInfo` int(11) NOT NULL AUTO_INCREMENT,`mailAccount` varchar(45) NOT NULL,`mailCountry` varchar(45) NOT NULL,`mailWeight` varchar(45) NOT NULL,`packageId` int(11) NOT NULL,`batchId` int(11) NOT NULL,PRIMARY KEY (`idmailInfo`),UNIQUE KEY `mailAccount_UNIQUE` (`mailAccount`))' ]
+log start
+数据库初始化完成！2013-12-27 20:01:17.357
+数据库初始化完成！2013-12-27 20:01:17.359
+[ 'create table if not exists `tBatchFile` (`idtBatchFile` INT NOT NULL AUTO_INCREMENT,`cBatchFileName` VARCHAR(255) NULL , PRIMARY KEY (`idtBatchFile`) ,UNIQUE INDEX `cBatchFileName_UNIQUE` (`cBatchFileName` ASC) );',
+  'CREATE TABLE if not exists `mailinfo` (`idmailInfo` int(11) NOT NULL AUTO_INCREMENT,`mailAccount` varchar(45) NOT NULL,`mailCountry` varchar(45) NOT NULL,`mailWeight` varchar(45) NOT NULL,`packageId` int(11) NOT NULL,`batchId` int(11) NOT NULL,PRIMARY KEY (`idmailInfo`),UNIQUE KEY `mailAccount_UNIQUE` (`mailAccount`))' ]
+log start
+数据库初始化完成！2013-12-27 20:03:29.299
+数据库初始化完成！2013-12-27 20:03:29.301
+[ 'create table if not exists `tBatchFile` (`idtBatchFile` INT NOT NULL AUTO_INCREMENT,`cBatchFileName` VARCHAR(255) NULL , PRIMARY KEY (`idtBatchFile`) ,UNIQUE INDEX `cBatchFileName_UNIQUE` (`cBatchFileName` ASC) );',
+  'CREATE TABLE if not exists `mailinfo` (`idmailInfo` int(11) NOT NULL AUTO_INCREMENT,`mailAccount` varchar(45) NOT NULL,`mailCountry` varchar(45) NOT NULL,`mailWeight` varchar(45) NOT NULL,`packageId` int(11) NOT NULL,`batchId` int(11) NOT NULL,PRIMARY KEY (`idmailInfo`),UNIQUE KEY `mailAccount_UNIQUE` (`mailAccount`))' ]
+log start
+数据库初始化完成！2013-12-27 20:05:29.484
+数据库初始化完成！2013-12-27 20:05:29.486
+[ 'create table if not exists `tBatchFile` (`idtBatchFile` INT NOT NULL AUTO_INCREMENT,`cBatchFileName` VARCHAR(255) NULL , PRIMARY KEY (`idtBatchFile`) ,UNIQUE INDEX `cBatchFileName_UNIQUE` (`cBatchFileName` ASC) );',
+  'CREATE TABLE if not exists `mailinfo` (`idmailInfo` int(11) NOT NULL AUTO_INCREMENT,`mailAccount` varchar(45) NOT NULL,`mailCountry` varchar(45) NOT NULL,`mailWeight` varchar(45) NOT NULL,`packageId` int(11) NOT NULL,`batchId` int(11) NOT NULL,PRIMARY KEY (`idmailInfo`),UNIQUE KEY `mailAccount_UNIQUE` (`mailAccount`))' ]
+log start
+数据库初始化完成！2013-12-27 20:05:32.573
+数据库初始化完成！2013-12-27 20:05:32.575
+[ 'create table if not exists `tBatchFile` (`idtBatchFile` INT NOT NULL AUTO_INCREMENT,`cBatchFileName` VARCHAR(255) NULL , PRIMARY KEY (`idtBatchFile`) ,UNIQUE INDEX `cBatchFileName_UNIQUE` (`cBatchFileName` ASC) );',
+  'CREATE TABLE if not exists `mailinfo` (`idmailInfo` int(11) NOT NULL AUTO_INCREMENT,`mailAccount` varchar(45) NOT NULL,`mailCountry` varchar(45) NOT NULL,`mailWeight` varchar(45) NOT NULL,`packageId` int(11) NOT NULL,`batchId` int(11) NOT NULL,PRIMARY KEY (`idmailInfo`),UNIQUE KEY `mailAccount_UNIQUE` (`mailAccount`))' ]
+log start
+数据库初始化完成！2013-12-27 20:06:00.520
+数据库初始化完成！2013-12-27 20:06:00.522
+[ 'create table if not exists `tBatchFile` (`idtBatchFile` INT NOT NULL AUTO_INCREMENT,`cBatchFileName` VARCHAR(255) NULL , PRIMARY KEY (`idtBatchFile`) ,UNIQUE INDEX `cBatchFileName_UNIQUE` (`cBatchFileName` ASC) );',
+  'CREATE TABLE if not exists `mailinfo` (`idmailInfo` int(11) NOT NULL AUTO_INCREMENT,`mailAccount` varchar(45) NOT NULL,`mailCountry` varchar(45) NOT NULL,`mailWeight` varchar(45) NOT NULL,`packageId` int(11) NOT NULL,`batchId` int(11) NOT NULL,PRIMARY KEY (`idmailInfo`),UNIQUE KEY `mailAccount_UNIQUE` (`mailAccount`))' ]
+log start
+数据库初始化完成！2013-12-27 20:06:31.798
+数据库初始化完成！2013-12-27 20:06:31.800
+[ 'create table if not exists `tBatchFile` (`idtBatchFile` INT NOT NULL AUTO_INCREMENT,`cBatchFileName` VARCHAR(255) NULL , PRIMARY KEY (`idtBatchFile`) ,UNIQUE INDEX `cBatchFileName_UNIQUE` (`cBatchFileName` ASC) );',
+  'CREATE TABLE if not exists `mailinfo` (`idmailInfo` int(11) NOT NULL AUTO_INCREMENT,`mailAccount` varchar(45) NOT NULL,`mailCountry` varchar(45) NOT NULL,`mailWeight` varchar(45) NOT NULL,`packageId` int(11) NOT NULL,`batchId` int(11) NOT NULL,PRIMARY KEY (`idmailInfo`),UNIQUE KEY `mailAccount_UNIQUE` (`mailAccount`))' ]
+log start
+数据库初始化完成！2013-12-27 20:06:38.738
+数据库初始化完成！2013-12-27 20:06:38.740
+[ 'create table if not exists `tBatchFile` (`idtBatchFile` INT NOT NULL AUTO_INCREMENT,`cBatchFileName` VARCHAR(255) NULL , PRIMARY KEY (`idtBatchFile`) ,UNIQUE INDEX `cBatchFileName_UNIQUE` (`cBatchFileName` ASC) );',
+  'CREATE TABLE if not exists `mailinfo` (`idmailInfo` int(11) NOT NULL AUTO_INCREMENT,`mailAccount` varchar(45) NOT NULL,`mailCountry` varchar(45) NOT NULL,`mailWeight` varchar(45) NOT NULL,`packageId` int(11) NOT NULL,`batchId` int(11) NOT NULL,PRIMARY KEY (`idmailInfo`),UNIQUE KEY `mailAccount_UNIQUE` (`mailAccount`))' ]
+log start
+数据库初始化完成！2013-12-27 20:06:50.233
+数据库初始化完成！2013-12-27 20:06:50.235
+[ 'create table if not exists `tBatchFile` (`idtBatchFile` INT NOT NULL AUTO_INCREMENT,`cBatchFileName` VARCHAR(255) NULL , PRIMARY KEY (`idtBatchFile`) ,UNIQUE INDEX `cBatchFileName_UNIQUE` (`cBatchFileName` ASC) );',
+  'CREATE TABLE if not exists `mailinfo` (`idmailInfo` int(11) NOT NULL AUTO_INCREMENT,`mailAccount` varchar(45) NOT NULL,`mailCountry` varchar(45) NOT NULL,`mailWeight` varchar(45) NOT NULL,`packageId` int(11) NOT NULL,`batchId` int(11) NOT NULL,PRIMARY KEY (`idmailInfo`),UNIQUE KEY `mailAccount_UNIQUE` (`mailAccount`))' ]
+log start
+数据库初始化完成！2013-12-27 20:10:43.193
+数据库初始化完成！2013-12-27 20:10:43.196
+[ 'create table if not exists `tBatchFile` (`idtBatchFile` INT NOT NULL AUTO_INCREMENT,`cBatchFileName` VARCHAR(255) NULL , PRIMARY KEY (`idtBatchFile`) ,UNIQUE INDEX `cBatchFileName_UNIQUE` (`cBatchFileName` ASC) );',
+  'CREATE TABLE if not exists `mailinfo` (`idmailInfo` int(11) NOT NULL AUTO_INCREMENT,`mailAccount` varchar(45) NOT NULL,`mailCountry` varchar(45) NOT NULL,`mailWeight` varchar(45) NOT NULL,`packageId` int(11) NOT NULL,`batchId` int(11) NOT NULL,PRIMARY KEY (`idmailInfo`),UNIQUE KEY `mailAccount_UNIQUE` (`mailAccount`))' ]
+log start
+数据库初始化完成！2013-12-27 20:14:36.915
+数据库初始化完成！2013-12-27 20:14:36.917
+[ 'create table if not exists `tBatchFile` (`idtBatchFile` INT NOT NULL AUTO_INCREMENT,`cBatchFileName` VARCHAR(255) NULL , PRIMARY KEY (`idtBatchFile`) ,UNIQUE INDEX `cBatchFileName_UNIQUE` (`cBatchFileName` ASC) );',
+  'CREATE TABLE if not exists `mailinfo` (`idmailInfo` int(11) NOT NULL AUTO_INCREMENT,`mailAccount` varchar(45) NOT NULL,`mailCountry` varchar(45) NOT NULL,`mailWeight` varchar(45) NOT NULL,`packageId` int(11) NOT NULL,`batchId` int(11) NOT NULL,PRIMARY KEY (`idmailInfo`),UNIQUE KEY `mailAccount_UNIQUE` (`mailAccount`))' ]
+log start
+数据库初始化完成！2013-12-27 20:17:34.664
+数据库初始化完成！2013-12-27 20:17:34.666
+[ 'create table if not exists `tBatchFile` (`idtBatchFile` INT NOT NULL AUTO_INCREMENT,`cBatchFileName` VARCHAR(255) NULL , PRIMARY KEY (`idtBatchFile`) ,UNIQUE INDEX `cBatchFileName_UNIQUE` (`cBatchFileName` ASC) );',
+  'CREATE TABLE if not exists `mailinfo` (`idmailInfo` int(11) NOT NULL AUTO_INCREMENT,`mailAccount` varchar(45) NOT NULL,`mailCountry` varchar(45) NOT NULL,`mailWeight` varchar(45) NOT NULL,`packageId` int(11) NOT NULL,`batchId` int(11) NOT NULL,PRIMARY KEY (`idmailInfo`),UNIQUE KEY `mailAccount_UNIQUE` (`mailAccount`))' ]
+log start
+数据库初始化完成！2013-12-27 20:17:50.683
+数据库初始化完成！2013-12-27 20:17:50.685
+[ 'create table if not exists `tBatchFile` (`idtBatchFile` INT NOT NULL AUTO_INCREMENT,`cBatchFileName` VARCHAR(255) NULL , PRIMARY KEY (`idtBatchFile`) ,UNIQUE INDEX `cBatchFileName_UNIQUE` (`cBatchFileName` ASC) );',
+  'CREATE TABLE if not exists `mailinfo` (`idmailInfo` int(11) NOT NULL AUTO_INCREMENT,`mailAccount` varchar(45) NOT NULL,`mailCountry` varchar(45) NOT NULL,`mailWeight` varchar(45) NOT NULL,`packageId` int(11) NOT NULL,`batchId` int(11) NOT NULL,PRIMARY KEY (`idmailInfo`),UNIQUE KEY `mailAccount_UNIQUE` (`mailAccount`))' ]
+log start
+数据库初始化完成！2013-12-27 20:25:16.786
+数据库初始化完成！2013-12-27 20:25:16.789
+[ 'create table if not exists `tBatchFile` (`idtBatchFile` INT NOT NULL AUTO_INCREMENT,`cBatchFileName` VARCHAR(255) NULL , PRIMARY KEY (`idtBatchFile`) ,UNIQUE INDEX `cBatchFileName_UNIQUE` (`cBatchFileName` ASC) );',
+  'CREATE TABLE if not exists `mailinfo` (`idmailInfo` int(11) NOT NULL AUTO_INCREMENT,`mailAccount` varchar(45) NOT NULL,`mailCountry` varchar(45) NOT NULL,`mailWeight` varchar(45) NOT NULL,`packageId` int(11) NOT NULL,`batchId` int(11) NOT NULL,PRIMARY KEY (`idmailInfo`),UNIQUE KEY `mailAccount_UNIQUE` (`mailAccount`))' ]
+log start
+数据库初始化完成！2013-12-27 20:34:08.403
+数据库初始化完成！2013-12-27 20:34:08.405
+[ 'create table if not exists `tBatchFile` (`idtBatchFile` INT NOT NULL AUTO_INCREMENT,`cBatchFileName` VARCHAR(255) NULL , PRIMARY KEY (`idtBatchFile`) ,UNIQUE INDEX `cBatchFileName_UNIQUE` (`cBatchFileName` ASC) );',
+  'CREATE TABLE if not exists `mailinfo` (`idmailInfo` int(11) NOT NULL AUTO_INCREMENT,`mailAccount` varchar(45) NOT NULL,`mailCountry` varchar(45) NOT NULL,`mailWeight` varchar(45) NOT NULL,`packageId` int(11) NOT NULL,`batchId` int(11) NOT NULL,PRIMARY KEY (`idmailInfo`),UNIQUE KEY `mailAccount_UNIQUE` (`mailAccount`))' ]
+log start
+数据库初始化完成！2013-12-27 20:37:38.668
+数据库初始化完成！2013-12-27 20:37:38.669
+[ 'create table if not exists `tBatchFile` (`idtBatchFile` INT NOT NULL AUTO_INCREMENT,`cBatchFileName` VARCHAR(255) NULL , PRIMARY KEY (`idtBatchFile`) ,UNIQUE INDEX `cBatchFileName_UNIQUE` (`cBatchFileName` ASC) );',
+  'CREATE TABLE if not exists `mailinfo` (`idmailInfo` int(11) NOT NULL AUTO_INCREMENT,`mailAccount` varchar(45) NOT NULL,`mailCountry` varchar(45) NOT NULL,`mailWeight` varchar(45) NOT NULL,`packageId` int(11) NOT NULL,`batchId` int(11) NOT NULL,PRIMARY KEY (`idmailInfo`),UNIQUE KEY `mailAccount_UNIQUE` (`mailAccount`))' ]
+log start
+数据库初始化完成！2013-12-27 20:38:05.638
+数据库初始化完成！2013-12-27 20:38:05.640
+[ 'create table if not exists `tBatchFile` (`idtBatchFile` INT NOT NULL AUTO_INCREMENT,`cBatchFileName` VARCHAR(255) NULL , PRIMARY KEY (`idtBatchFile`) ,UNIQUE INDEX `cBatchFileName_UNIQUE` (`cBatchFileName` ASC) );',
+  'CREATE TABLE if not exists `mailinfo` (`idmailInfo` int(11) NOT NULL AUTO_INCREMENT,`mailAccount` varchar(45) NOT NULL,`mailCountry` varchar(45) NOT NULL,`mailWeight` varchar(45) NOT NULL,`packageId` int(11) NOT NULL,`batchId` int(11) NOT NULL,PRIMARY KEY (`idmailInfo`),UNIQUE KEY `mailAccount_UNIQUE` (`mailAccount`))' ]
+log start
+数据库初始化完成！2013-12-27 20:50:46.517
+数据库初始化完成！2013-12-27 20:50:46.519
+[ 'create table if not exists `tBatchFile` (`idtBatchFile` INT NOT NULL AUTO_INCREMENT,`cBatchFileName` VARCHAR(255) NULL , PRIMARY KEY (`idtBatchFile`) ,UNIQUE INDEX `cBatchFileName_UNIQUE` (`cBatchFileName` ASC) );',
+  'CREATE TABLE if not exists `mailinfo` (`idmailInfo` int(11) NOT NULL AUTO_INCREMENT,`mailAccount` varchar(45) NOT NULL,`mailCountry` varchar(45) NOT NULL,`mailWeight` varchar(45) NOT NULL,`packageId` int(11) NOT NULL,`batchId` int(11) NOT NULL,PRIMARY KEY (`idmailInfo`),UNIQUE KEY `mailAccount_UNIQUE` (`mailAccount`))' ]
+log start
+数据库初始化完成！2013-12-27 20:53:12.429
+数据库初始化完成！2013-12-27 20:53:12.431
+[ 'create table if not exists `tBatchFile` (`idtBatchFile` INT NOT NULL AUTO_INCREMENT,`cBatchFileName` VARCHAR(255) NULL , PRIMARY KEY (`idtBatchFile`) ,UNIQUE INDEX `cBatchFileName_UNIQUE` (`cBatchFileName` ASC) );',
+  'CREATE TABLE if not exists `mailinfo` (`idmailInfo` int(11) NOT NULL AUTO_INCREMENT,`mailAccount` varchar(45) NOT NULL,`mailCountry` varchar(45) NOT NULL,`mailWeight` varchar(45) NOT NULL,`packageId` int(11) NOT NULL,`batchId` int(11) NOT NULL,PRIMARY KEY (`idmailInfo`),UNIQUE KEY `mailAccount_UNIQUE` (`mailAccount`))' ]
+log start
+数据库初始化完成！2013-12-27 20:53:50.229
+数据库初始化完成！2013-12-27 20:53:50.231
+[ 'create table if not exists `tBatchFile` (`idtBatchFile` INT NOT NULL AUTO_INCREMENT,`cBatchFileName` VARCHAR(255) NULL , PRIMARY KEY (`idtBatchFile`) ,UNIQUE INDEX `cBatchFileName_UNIQUE` (`cBatchFileName` ASC) );',
+  'CREATE TABLE if not exists `mailinfo` (`idmailInfo` int(11) NOT NULL AUTO_INCREMENT,`mailAccount` varchar(45) NOT NULL,`mailCountry` varchar(45) NOT NULL,`mailWeight` varchar(45) NOT NULL,`packageId` int(11) NOT NULL,`batchId` int(11) NOT NULL,PRIMARY KEY (`idmailInfo`),UNIQUE KEY `mailAccount_UNIQUE` (`mailAccount`))' ]

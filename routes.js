@@ -7,7 +7,7 @@ var index = require('./controllers/index');
 var user = require('./controllers/user');
 var fileLoad = require('./controllers/fileLoad')
     ,packageManage = require('./controllers/packageManage')
-    ,stateCompare = require('./controllers/stateCompare');
+    ,stateCompare = require('./controllers/cStateCompare');
 
 module.exports = function (app) {
     // home page
@@ -17,7 +17,7 @@ module.exports = function (app) {
     app.get('/users', user.list);
     app.get('/getBatchFile', packageManage.getBatchFile);
 
-    app.get('/stateCompare', stateCompare.compare);
+    app.post('/stateCompare', stateCompare.compare);
 
     app.post('/upfile', fileLoad.fileUp);
     app.post('/fileToDb', fileLoad.fileUpToDB);
