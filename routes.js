@@ -6,13 +6,18 @@
 var index = require('./controllers/index');
 var user = require('./controllers/user');
 var fileLoad = require('./controllers/fileLoad')
-    ,packageManage = require('./controllers/packageManage');
+    ,packageManage = require('./controllers/packageManage')
+    ,stateCompare = require('./controllers/stateCompare');
 
 module.exports = function (app) {
     // home page
     app.get('/', index.index);
+    app.get('/stateCompare', stateCompare.index);
+
     app.get('/users', user.list);
     app.get('/getBatchFile', packageManage.getBatchFile);
+
+    app.get('/stateCompare', stateCompare.compare);
 
     app.post('/upfile', fileLoad.fileUp);
     app.post('/fileToDb', fileLoad.fileUpToDB);
