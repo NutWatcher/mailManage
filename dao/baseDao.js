@@ -8,12 +8,12 @@ var mysql = require('mysql')
     ,moment = require('moment');
 
 var config = require('../config')
-    ,dbInitConfig = require('../initDB');
+    ,dbConfig = require('../configDB');
 
 var log = require('../controllers/errLog');
 
 var pool  = mysql.createPool(config.mysqlConfig);
-var queryDbStream = function (strSqls,cb) {
+var queryDbStream = function (strSqls, cb, endCb) {
     var strSql = "" ;
     for ( var i = 0 ; i < strSqls.length ; i ++ ){
         strSql += strSqls[i] ;
@@ -22,7 +22,7 @@ var queryDbStream = function (strSqls,cb) {
         // Use the connection
         if (err) {
             cb(err);
-            throw err;
+            return ;
         }
         var query = connection.query(strSql);
         query
@@ -30,7 +30,6 @@ var queryDbStream = function (strSqls,cb) {
                 // Handle error, an 'end' event will be emitted after this as well
                 if (err) {
                     cb(err);
-                    throw err;
                 }
             })
             .on('fields', function(fields, index) {
@@ -39,21 +38,21 @@ var queryDbStream = function (strSqls,cb) {
             .on('result', function(row, index) {
                 // index refers to the statement this result belongs to (starts at 0)
                 if ( cb ){
-                    cb(err,row,index) ;
+                    cb("",row,index) ;
                 }
             })
             .on('end', function() {
                 // all rows have been received
                 connection.release();
-                log.info(strSqls);
+                endCb();
             });
     });
-}
+};
 var queryDb = function (strSql,cb) {
     pool.getConnection(function(err, connection) {
         if (err) {
             cb(err);
-            throw err;
+            return ;
         }
         connection.query( strSql , function(err, rows) {
             // And done with the connection.
@@ -67,24 +66,43 @@ var queryDb = function (strSql,cb) {
             // Don't use the connection here, it has been returned to the pool.
         });
     });
-}
+};
 
-var initDb = function () {
-    queryDbStream(dbInitConfig,function(err,row,index){
+exports.createTableDb = function (cb) {
+    queryDbStream(dbConfig.initSql,function(err,row,index){
         if (err) {
-            log.error(err);
-            throw err;
+            cb(err);
+            return ;
         }
         else{
-            log.info("数据库初始化完成！" + moment().format('YYYY-MM-DD HH:mm:ss.SSS'))
+            log.info(dbConfig.initSql[index] , "数据库初始化完成！" + moment().format('YYYY-MM-DD HH:mm:ss.SSS'));
+            console.info(dbConfig.initSql[index] , "数据库初始化完成！" + moment().format('YYYY-MM-DD HH:mm:ss.SSS'));
         }
+    }, function(){
+        log.info("数据库初始化完成！" + moment().format('YYYY-MM-DD HH:mm:ss.SSS'));
+        console.info("数据库初始化完成！" + moment().format('YYYY-MM-DD HH:mm:ss.SSS'));
+        cb() ;
     });
-}
-initDb();
+};
+
+exports.dropTableDb = function (cb) {
+    queryDbStream(dbConfig.dropSql,function(err,row,index){
+        if (err) {
+            cb(err);
+            return ;
+        }
+        else{
+            log.info(dbConfig.dropSql[index] , "数据库删除完成！" + moment().format('YYYY-MM-DD HH:mm:ss.SSS'));
+        }
+    }, function(){
+        log.info("数据库删除完成！" + moment().format('YYYY-MM-DD HH:mm:ss.SSS'));
+        cb();
+    });
+};
 
 exports.queryDb = function (strSql,cb) {
     queryDb(strSql,cb);
-}
+};
 exports.queryDbStream = function (strSql,cb) {
     queryDbStream(strSql,cb);
-}
+};

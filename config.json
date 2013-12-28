@@ -1,2 +1,7 @@
-{"filedir":"D:/filetemp/"
-    ,"mysqlConfig":{"host": "localhost","port":"3306", "database":"test" , "multipleStatements": "true", "user": "root","password": "root"}}
+{
+    "fileDir":"D:/mailManageFileDir/"
+    ,"fileUpLoadDir":"./upLoadDir"
+    ,"fileInitDir":"./initDir"
+    ,"fileLogDir":"./logDir"
+    ,"mysqlConfig":{"host": "localhost","port":"3306", "database":"test" , "multipleStatements": "true", "user": "root","password": "root"}
+}

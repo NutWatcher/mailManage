@@ -8,13 +8,14 @@ var moment = require('moment');
 var util = require('util');
 var os = require('os');
 
-var logdir = path.join(__dirname + '/logs');
-if (!fs.existsSync(logdir)) {
-    fs.mkdirSync(logdir);
+var config = require('../config');
+var logDir = path.join(config.fileDir + config.fileLogDir);
+if (!fs.existsSync(logDir)) {
+    fs.mkdirSync(logDir);
 }
 
-var info = fs.createWriteStream(logdir + '/info.log', {flags: 'a', mode: '0666'});
-var error = fs.createWriteStream(logdir + '/error.log', {flags: 'a', mode: '0666'});
+var info = fs.createWriteStream(logDir + '/info.log', {flags: 'a', mode: '0666'});
+var error = fs.createWriteStream(logDir + '/error.log', {flags: 'a', mode: '0666'});
 
 var logger = new console.Console(info, error);
 
@@ -49,7 +50,7 @@ var format = function (msg) {
 };
 
 logger.log('log start');
-logger.error('errlog start');
+logger.error('errLog start');
 /*
 var input = '{error: format}';
 try {
@@ -60,7 +61,12 @@ try {
 }*/
 exports.error =function(err){
     logger.error(format(err));
-}
+};
 exports.info =function(str){
     logger.log(str);
-}
+};
+exports.infoTime =function(str){
+    var date = moment();
+    var time = date.format('YYYY-MM-DD HH:mm:ss.SSS');
+    logger.log(str,time);
+};

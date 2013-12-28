@@ -1,0 +1,11 @@
+{
+    "initSql":["CREATE TABLE if not exists `tbatchfile` (`idtBatchFile` INT NOT NULL AUTO_INCREMENT,`cBatchFileName` VARCHAR(255) NULL , PRIMARY KEY (`idtBatchFile`) ,UNIQUE INDEX `cBatchFileName_UNIQUE` (`cBatchFileName` ASC) );"
+        ,"CREATE TABLE if not exists `mailinfo` (`idmailInfo` int(11) NOT NULL AUTO_INCREMENT,`mailAccount` varchar(45) NOT NULL,`mailCountry` varchar(45) NOT NULL,`mailWeight` varchar(45) NOT NULL,`packageId` int(11) NOT NULL,`batchId` int(11) NOT NULL,PRIMARY KEY (`idmailInfo`),UNIQUE KEY `mailAccount_UNIQUE` (`mailAccount`));"
+        ,"CREATE TABLE if not exists `statecompare` (`idstateCompare` int(11) NOT NULL AUTO_INCREMENT,`stateName` varchar(105) DEFAULT NULL,PRIMARY KEY (`idstateCompare`));"
+    ],
+    "dropSql":["drop table `test`.`tbatchfile`;"
+        ,"drop table `test`.`mailinfo`;"
+        ,"drop table `test`.`statecompare`;"
+    ],
+    "tableName":["tbatchfile","mailinfo","statecompare"]
+}

@@ -22,7 +22,7 @@
                         if (msg.success == true) {
                             var strOut = ""
                             for (var i = 0 ; i < msg.data.length ; i ++ ){
-                                strOut += msg.data[i].compareStr + "……" + msg.data[i].compareValue + "\n" ;
+                                strOut += msg.data[i].compareStr + "…" + msg.data[i].compareValue + "\n" ;
                             }
                             $("#textOut").val(strOut);
                             $("#pInfo").text("比对完成!!!");
