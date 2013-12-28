@@ -14,10 +14,10 @@ module.exports = function (app) {
     // home page
     app.get('/', index.index);
     app.get('/admin', admin.index);
+    app.get('/packageManage', packageManage.index);
     app.get('/stateCompare', stateCompare.index);
 
     app.get('/users', user.list);
-    app.get('/getBatchFile', packageManage.getBatchFile);
 
     app.post('/stateCompare', stateCompare.compare);
     app.post('/resetStateName', stateCompare.resetStateName);

@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27488fa2-f009-4d06-8a55-1f86eb4dc46d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/admin.ejs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/admin.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/cStateCompare.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/startApp.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dao/stateCompareDao.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/other/stateName.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/packageManage.ejs" />
+      <change type="DELETED" beforePath="C:\works\mailManage\views\package.ejs" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/cc.ejs" afterPath="$PROJECT_DIR$/views/cc.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/packageManage.js" afterPath="$PROJECT_DIR$/controllers/packageManage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes.js" afterPath="$PROJECT_DIR$/routes.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mailManage.iws" />
@@ -31,98 +30,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="cStateCompare.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/cStateCompare.js">
+      <file leaf-file-name="packageManage.ejs" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/packageManage.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="6" selection-start="2936" selection-end="2936" vertical-scroll-proportion="0.0" vertical-offset="132" max-vertical-offset="1862">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stateCompareDao.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dao/stateCompareDao.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="42" selection-start="875" selection-end="875" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="722">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="startApp.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/startApp.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="142" selection-end="185" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1311">
+            <state line="34" column="28" selection-start="909" selection-end="909" vertical-scroll-proportion="1.1494662" vertical-offset="0" max-vertical-offset="1748">
               <folding>
-                <element signature="e#0#38#0" expanded="false" />
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="configDB.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/configDB.json">
+      <file leaf-file-name="cc.ejs" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/cc.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="1" selection-start="946" selection-end="946" vertical-scroll-proportion="-6.785714" vertical-offset="0" max-vertical-offset="304">
+            <state line="14" column="11" selection-start="554" selection-end="554" vertical-scroll-proportion="-8.142858" vertical-offset="38" max-vertical-offset="1254">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/admin.js">
+      <file leaf-file-name="routes.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="60" selection-start="718" selection-end="718" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="627">
-              <folding>
-                <element signature="e#0#38#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stateName.json" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/other/stateName.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="28" selection-start="733" selection-end="748" vertical-scroll-proportion="0.32384342" vertical-offset="901" max-vertical-offset="2717">
+            <state line="19" column="33" selection-start="588" selection-end="588" vertical-scroll-proportion="0.0" vertical-offset="56" max-vertical-offset="646">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="errLog.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/errLog.js">
+      <file leaf-file-name="packageManage.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/packageManage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="2" selection-start="1462" selection-end="1462" vertical-scroll-proportion="0.0" vertical-offset="778" max-vertical-offset="1463">
+            <state line="4" column="16" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="209">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stateCompare.ejs" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/stateCompare.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="45" selection-start="752" selection-end="798" vertical-scroll-proportion="-5.714286" vertical-offset="220" max-vertical-offset="1254">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="33" selection-start="310" selection-end="310" vertical-scroll-proportion="0.0" vertical-offset="740" max-vertical-offset="1330">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="baseDao.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dao/baseDao.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="37" selection-start="2597" selection-end="2597" vertical-scroll-proportion="0.0" vertical-offset="1462" max-vertical-offset="2166">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -148,15 +89,12 @@
         <option value="$PROJECT_DIR$/dao/fileUploadDao.js" />
         <option value="$PROJECT_DIR$/views/package.ejs" />
         <option value="$PROJECT_DIR$/public/javascripts/check_file.js" />
-        <option value="$PROJECT_DIR$/controllers/packageManage.js" />
         <option value="$PROJECT_DIR$/dao/packageManageDao.js" />
-        <option value="$PROJECT_DIR$/views/cc.ejs" />
         <option value="$PROJECT_DIR$/controllers/stateCompare.js" />
         <option value="$PROJECT_DIR$/controllers/3235.js" />
         <option value="$PROJECT_DIR$/initDB.json" />
         <option value="$PROJECT_DIR$/controllers/fileLoad.js" />
         <option value="$PROJECT_DIR$/views/admin.ejs" />
-        <option value="$PROJECT_DIR$/routes.js" />
         <option value="$PROJECT_DIR$/configDB.json" />
         <option value="$PROJECT_DIR$/controllers/startApp.js" />
         <option value="$PROJECT_DIR$/config.json" />
@@ -167,6 +105,10 @@
         <option value="$PROJECT_DIR$/controllers/cStateCompare.js" />
         <option value="$PROJECT_DIR$/controllers/errLog.js" />
         <option value="$PROJECT_DIR$/controllers/admin.js" />
+        <option value="$PROJECT_DIR$/views/cc.ejs" />
+        <option value="$PROJECT_DIR$/controllers/packageManage.js" />
+        <option value="$PROJECT_DIR$/routes.js" />
+        <option value="$PROJECT_DIR$/views/packageManage.ejs" />
       </list>
     </option>
   </component>
@@ -448,7 +390,11 @@
       <created>1388241746781</created>
       <updated>1388241746781</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="20131228-22:06&#10;">
+      <created>1388241843764</created>
+      <updated>1388241843764</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -491,7 +437,8 @@
     <MESSAGE value="20131227-21:04" />
     <MESSAGE value="20131228-22:04&#10;" />
     <MESSAGE value="20131228-22:05&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="20131228-22:05&#10;" />
+    <MESSAGE value="20131228-22:06&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="20131228-22:06&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -575,21 +522,9 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="572" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/cc.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="11" selection-start="1184" selection-end="1184" vertical-scroll-proportion="1.0477941" vertical-offset="57" max-vertical-offset="1577" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dao/fileUploadDao.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="23" selection-start="260" selection-end="660" vertical-scroll-proportion="0.34118968" vertical-offset="0" max-vertical-offset="891">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/packageManage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="50" selection-start="89" selection-end="89" vertical-scroll-proportion="0.06397306" vertical-offset="0" max-vertical-offset="891">
           <folding />
         </state>
       </provider>
@@ -617,16 +552,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="39" selection-start="750" selection-end="750" vertical-scroll-proportion="0.64576274" vertical-offset="56" max-vertical-offset="646">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="33" selection-start="310" selection-end="310" vertical-scroll-proportion="0.0" vertical-offset="740" max-vertical-offset="1330">
+        <state line="14" column="33" selection-start="310" selection-end="310" vertical-scroll-proportion="-0.80338985" vertical-offset="740" max-vertical-offset="1330">
           <folding />
         </state>
       </provider>
@@ -640,7 +568,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dao/baseDao.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="37" selection-start="2597" selection-end="2597" vertical-scroll-proportion="0.0" vertical-offset="1462" max-vertical-offset="2166">
+        <state line="87" column="37" selection-start="2597" selection-end="2597" vertical-scroll-proportion="0.3237288" vertical-offset="1462" max-vertical-offset="2166">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -656,7 +584,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/stateCompare.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="45" selection-start="752" selection-end="798" vertical-scroll-proportion="-5.714286" vertical-offset="220" max-vertical-offset="1254">
+        <state line="20" column="45" selection-start="752" selection-end="798" vertical-scroll-proportion="0.2846975" vertical-offset="220" max-vertical-offset="1254">
           <folding />
         </state>
       </provider>
@@ -686,7 +614,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/errLog.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="2" selection-start="1462" selection-end="1462" vertical-scroll-proportion="0.0" vertical-offset="778" max-vertical-offset="1463">
+        <state line="63" column="2" selection-start="1462" selection-end="1462" vertical-scroll-proportion="0.7101695" vertical-offset="778" max-vertical-offset="1463">
           <folding />
         </state>
       </provider>
@@ -704,6 +632,43 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="57" column="28" selection-start="733" selection-end="748" vertical-scroll-proportion="0.32384342" vertical-offset="901" max-vertical-offset="2717">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/cc.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="11" selection-start="554" selection-end="554" vertical-scroll-proportion="-8.142858" vertical-offset="38" max-vertical-offset="1254">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="289" column="0" selection-start="6450" selection-end="6450" vertical-scroll-proportion="0.3322034" vertical-offset="5295" max-vertical-offset="6194">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/packageManage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="16" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="209">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="33" selection-start="588" selection-end="588" vertical-scroll-proportion="0.0" vertical-offset="56" max-vertical-offset="646">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/packageManage.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="28" selection-start="909" selection-end="909" vertical-scroll-proportion="1.1494662" vertical-offset="0" max-vertical-offset="1748">
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
