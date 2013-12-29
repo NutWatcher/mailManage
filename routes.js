@@ -6,7 +6,7 @@
 var index = require('./controllers/index');
 var user = require('./controllers/user');
 var fileLoad = require('./controllers/fileLoad')
-    ,packageManage = require('./controllers/packageManage')
+    ,mailePackageManage = require('./controllers/mailePackageManage')
     ,stateCompare = require('./controllers/cStateCompare')
     ,admin = require('./controllers/admin');
 
@@ -14,7 +14,7 @@ module.exports = function (app) {
     // home page
     app.get('/', index.index);
     app.get('/admin', admin.index);
-    app.get('/packageManage', packageManage.index);
+    app.get('/packageManage', mailePackageManage.index);
     app.get('/stateCompare', stateCompare.index);
 
     app.get('/users', user.list);
@@ -26,4 +26,6 @@ module.exports = function (app) {
 
     app.post('/upfile', fileLoad.fileUp);
     app.post('/fileToDb', fileLoad.fileUpToDB);
+    app.post('/addMailPackage', mailePackageManage.addNewPackage);
+    app.get('/getMailPackage', mailePackageManage.getDataByLen);
 };

@@ -40,11 +40,11 @@ function ajax_fileToDb(filename) {
         success: function(msg){
             if (msg.success == false){
                 $('#fileUpInfo').text("导入失败！！！");
-                $('#fileUpOtherInfo').text(msg.msg);
+                $('#pInfo').text(msg.msg);
             }
             else{
                 $('#fileUpInfo').text("导入成功！！！");
-                $('#fileUpOtherInfo').text(msg.msg);
+                $('#pInfo').text(msg.msg);
                 var t = $('#upBackInfo tbody');
                 $('#upBackInfo thead').append("<tr><th>错误信息</th></tr>");
                 for(var i = 0 ; i < msg.backInfo.length ; i ++ ){
@@ -56,13 +56,41 @@ function ajax_fileToDb(filename) {
                         t.append("<tr><td>第"+ value.row +"条记录："+ value.msg +"</td></tr>");
                     }
                 }
-                $('#upBackInfo')
             }
         },
         error: function (xmlHttpRequest, error){
             alert(error.toString());
             $('#fileUpInfo').text("导入失败！！！");
-            $('#fileUpOtherInfo').text(error.toString());
+            $('#pInfo').text(error.toString());
         }
     });
+}
+function addMailPackage(cb){
+    $.ajax({
+        method: 'POST',
+        url: './addMailPackage',
+        success: function(msg){
+            cb(msg);
+        },
+        error: function(xmlHttpRequest, err){
+            alert(error.toString());
+            $('#pInfo').text("新建包失败！！！" + error.toString());
+        }
+    })
+}
+function getMailPackage(len, cb){
+    $.ajax({
+        method: 'GET',
+        url: './getMailPackage',
+        data:{
+            len : len
+        },
+        success: function(msg){
+            cb(msg);
+        },
+        error: function(xmlHttpRequest, err){
+            alert(error.toString());
+            $('#pInfo').text("获取包信息失败！！！" + error.toString());
+        }
+    })
 }

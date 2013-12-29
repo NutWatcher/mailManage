@@ -13,7 +13,8 @@ exports.resetDB = function(req, res){
     log.infoTime(req.connection.remoteAddress + "重置数据库");
     baseDb.dropTableDb(function(err){
         if (err) {
-            throw err ;
+            log.error(err);
+            res.send({"success":false,"data":"数据库出错！！！" + err.message});
         }
         else{
             baseDb.createTableDb(function(err){

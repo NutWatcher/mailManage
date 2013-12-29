@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>无标题文档</title>
-    <link rel='stylesheet' href='/stylesheets/reset.css'/>
+    <link rel='stylesheet' href='./stylesheets/reset.css'/>
     <link rel="stylesheet" href="./themes/jquery-ui.min.css">
     <script src="./javascripts/check_file.js"></script>
     <script src="./javascripts/jquery-1.9.1.js"></script>
@@ -12,6 +12,28 @@
         $(function () {
             $("#packageManage").button();
             $("#bStateCompare").button();
+            $("#addNewPackage")
+                .button()
+                .on('click', function(event){
+                        event.stopPropagation() ;
+                        addMailPackage(function(msg){
+                            if (msg.success == true){
+                                getMailPackage(50, function(msgTemp){
+                                    if (msgTemp.success == true){
+                                        alert("新建包名:" + msg.data);
+                                    }
+                                    else{
+                                        alert("获取包信息失败！！！");
+                                        $('#pInfo').text(msg.msg);
+                                    }
+                                });
+                            }
+                            else{
+                                alert("新建包失败！！！");
+                                $('#pInfo').text(msgTemp.msg);
+                            }
+                        });
+                    });
         });
     </script>
     <style>
@@ -30,10 +52,10 @@
         <span style="color:red;margin-left: 20px"> 文件名不能带有'\'</span>
         <iframe name="check_file_frame" style="display:none;"></iframe>
         <p id="fileUpInfo"> </p>
-        <p id="fileUpOtherInfo"> </p>
+        <p id="pInfo"> </p>
     </form>
-    <a style="margin-top: 10px" name="packageManage" id="packageManage" href="http://www.baidu.com" target="_blank">数据管理</a>
-    <a style="margin-top: 10px" name="bStateCompare" id="bStateCompare" href="./stateCompare" target="_blank">比对州名</a>
+    <a style="margin-top: 10px"  id="packageManage" href="http://www.baidu.com" target="_blank">数据管理</a>
+    <a style="margin-top: 10px"  id="bStateCompare" href="./stateCompare" target="_blank">比对州名</a>
 </div>
 
 <label for="packageId">选择添加邮件的包</label>
@@ -55,6 +77,5 @@
     <tbody>
     </tbody>
 </table>
-<textarea></textarea>
 </body>
 </html>
