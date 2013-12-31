@@ -28,4 +28,5 @@ module.exports = function (app) {
     app.post('/fileToDb', fileLoad.fileUpToDB);
     app.post('/addMailPackage', mailePackageManage.addNewPackage);
     app.get('/getMailPackage', mailePackageManage.getDataByLen);
+    app.get('/getMailPackageInfo', mailePackageManage.getManageDataByLen);
 };

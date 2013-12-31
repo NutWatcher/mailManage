@@ -27,7 +27,7 @@ exports.addNewPackage = function (req, res, next) {
             });
         }
     }) ;
-}
+};
 exports.getDataByLen = function (req, res, next) {
     mailPackageDB.getDataByLen(req.query.len, function(err, rows){
         if (err){
@@ -39,4 +39,16 @@ exports.getDataByLen = function (req, res, next) {
             res.send({"success":true,"data":rows });
         }
     }) ;
-}
+};
+exports.getManageDataByLen = function (req, res, next){
+    mailPackageDB.getManageDataByLen(req.query.start, req.query.length, function(err, rows){
+        if (err){
+            log.error(err);
+            res.send({"success":false,"data":"获取数据信息出错！！！" + err.message });
+            return ;
+        }
+        else{
+            res.send({"success":true,"data":rows });
+        }
+    } );
+};

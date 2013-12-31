@@ -5,5 +5,5 @@
     ,"fileLogDir":"./logDir"
     ,"mysqlConfig":{"host": "localhost",
                         "port":"3306", "database":"test" ,
-                        "multipleStatements": "true", "user": "root","password": "123123"}
+                        "multipleStatements": "true", "user": "root","password": "root"}
 }

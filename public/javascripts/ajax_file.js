@@ -64,7 +64,7 @@ function ajax_fileToDb(filename) {
             $('#pInfo').text(error.toString());
         }
     });
-}
+};
 function addMailPackage(cb){
     $.ajax({
         method: 'POST',
@@ -77,13 +77,30 @@ function addMailPackage(cb){
             $('#pInfo').text("新建包失败！！！" + error.toString());
         }
     })
-}
+};
 function getMailPackage(len, cb){
     $.ajax({
         method: 'GET',
         url: './getMailPackage',
         data:{
             len : len
+        },
+        success: function(msg){
+            cb(msg);
+        },
+        error: function(xmlHttpRequest, err){
+            alert(error.toString());
+            $('#pInfo').text("获取包信息失败！！！" + error.toString());
+        }
+    })
+};
+function getMailPackageInfo(start, len, cb){
+    $.ajax({
+        method: 'GET',
+        url: './getMailPackageInfo',
+        data:{
+            length : len,
+            start: start
         },
         success: function(msg){
             cb(msg);

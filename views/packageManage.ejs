@@ -5,23 +5,91 @@
     <title>无标题文档</title>
     <link rel='stylesheet' href='/stylesheets/reset.css'/>
     <link rel="stylesheet" href="./themes/jquery-ui.min.css">
-    <script src="./javascripts/check_file.js"></script>
+    <script src="./javascripts/ajax_file.js"></script>
     <script src="./javascripts/jquery-1.9.1.js"></script>
     <script src="./javascripts/jquery-ui.min.js"></script>
     <script>
+        var insertTable = function(data, head){
+            var t ;
+            if (head !== undefined){
+                t = $('table thead');
+                t.empty();
+                var str = "<tr>" ;
+                for(var i = 0 ; i < head.length ; i ++ ){
+                    str += "<td>"+ head[i] +"</td>" ;
+                }
+                str += "</tr>";
+                t.append(str);
+            }
+            var t = $('table tbody');
+            t.empty();
+            for(var i = 0 ; i < data.length ; i ++ ){
+                var value = data[i];
+                t.append("<tr><td>"+value.fileName+"</td><td>"+value.waitMail+"</td><td>"+value.mailNum+"</td><td>"+value.packageNum+"</td></tr>");
+            }
+        };
+        var getIndexInfo = function(start, length){
+            var tableHead = ["文件名"
+                ,"未处理邮件数量"
+                ,"邮件总数量"
+                ,"归属邮包数量"];
+            var tableData = []
+                    ,showData={}
+                    ,dataTemp ;
+            getMailPackageInfo(start, length, function(msg){
+                if (msg.success == true) {
+                    for(var i = 0 ;i < msg.data.length ; i ++ ){
+                        dataTemp = msg.data[i];
+                        if ( showData[dataTemp.batchId] == null ){
+                            showData[dataTemp.batchId] = {
+                                "fileName":"",
+                                "packageNum":0,
+                                "waitMail":0,
+                                "mailNum":0
+                            };
+                        }
+                        showData[dataTemp.batchId].fileName = dataTemp.cBatchFileName ;
+                        showData[dataTemp.batchId].mailNum += dataTemp.mailNum ;
+                        if ( dataTemp.packageId == 0 ){
+                            showData[dataTemp.batchId].waitMail = dataTemp.mailNum ;
+                        }
+                        else{
+                            showData[dataTemp.batchId].packageNum ++ ;
+                        }
+                    }
+                    for(var i in showData){ //遍历object
+                        tableData.push(showData[i]);
+                    }
+                    insertTable(tableData, tableHead);
+                }
+                else {
+                    $("#pInfo").text(msg.data);
+                }
+            })
+        };
         $(function () {
             $("button").button();
+            getIndexInfo(0, 50);
         });
     </script>
     <style>
-        table {
-            text-align: center;;
-            width: 80%;
-            margin: 0 auto;
+        thead td{
+            border-bottom: 1px solid #56dd40;
         }
+        tbody td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+        }
+        table {
+             text-align: center;
+             width: 80%;
+             margin: 0 auto;
+             font-size: 16px;
+         }
         div {
-            padding-top: 20px;;
-            text-align: center;;
+            padding-top: 20px;
+            text-align: center;
             width: 500px;
             margin: 0 auto;
         }
@@ -29,58 +97,18 @@
     </style>
 </head>
 <body style="padding: 30px">
+<p id="pInfo"></p>
     <table>
         <thead>
-            <tr>
-                <td>文件名</td>
-                <td>未处理邮件数量</td>
-                <td>邮件总数量</td>
-                <td>归属邮包数量</td>
-                <td>查看</td>
-            </tr>
+        <tr><td>sdf</td></tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1号文件</td>
-                <td>20</td>
-                <td>120</td>
-                <td>3</td>
-            </tr>
-            <tr>
-                <td>1号文件</td>
-                <td>20</td>
-                <td>120</td>
-                <td>3</td>
-            </tr>
-            <tr>
-                <td>1号文件</td>
-                <td>20</td>
-                <td>120</td>
-                <td>3</td>
-            </tr>
-            <tr>
-                <td>1号文件</td>
-                <td>20</td>
-                <td>120</td>
-                <td>3</td>
-            </tr>
-            <tr>
-                <td>1号文件</td>
-                <td>20</td>
-                <td>120</td>
-                <td>3</td>
-            </tr>
-            <tr>
-                <td>1号文件</td>
-                <td>20</td>
-                <td>120</td>
-                <td>3</td>
-            </tr>
         </tbody>
     </table>
     <div>
         <button>上一页</button>
         <button>下一页</button>
     </div>
+
 </body>
 </html>
