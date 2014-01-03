@@ -9,7 +9,24 @@
     <script src="./javascripts/jquery-1.9.1.js"></script>
     <script src="./javascripts/jquery-ui.min.js"></script>
     <script>
+        var addPackageSelect = function(data){
+            var s = $("#packageSelect");
+            s.empty();
+            s.append("<option value=''></option>");
+            for ( var i = 0 ; i < data.length ; i ++ ){
+                s.append("<option value='"+ data[i].idtMailPackage +"'>"+ data[i].idtMailPackage +"</option>");
+            }
+        };
         $(function () {
+            getMailPackage(50, function(msgTemp){
+                if (msgTemp.success == true){
+                    addPackageSelect(msgTemp.data);
+                }
+                else{
+                    alert("获取包信息失败！！！");
+                    $('#pInfo').text(msg.msg);
+                }
+            });
             $("#packageManage").button();
             $("#bStateCompare").button();
             $("#addNewPackage")
@@ -21,6 +38,7 @@
                                 getMailPackage(50, function(msgTemp){
                                     if (msgTemp.success == true){
                                         alert("新建包名:" + msg.data);
+                                        addPackageSelect(msgTemp.data);
                                     }
                                     else{
                                         alert("获取包信息失败！！！");
@@ -34,17 +52,34 @@
                             }
                         });
                     });
+            $('#mailId').keyup(function(e){
+                var key =  e.which;
+                if(key == 13){
+                    var packageId = $("#packageSelect").val();
+                    if ( packageId == '' ){
+                        alert("请选择包！！！");
+                        return;
+                    }
+                    alert(packageId);
+                }
+            });
         });
     </script>
     <style>
         .tEven {
            background-color: #ffead7;
         }
+        #mailId {
+            width: 300px;
+            height: 28px;
+            margin-top: 20px;
+            font-size:20px;
+            line-height:28px;
+        }
     </style>
 </head>
 <body style="padding: 30px">
-
-<div style="border-bottom-color: greenyellow;border-bottom-width: 1px;border-bottom-style: solid;padding-bottom: 5px">
+<div style="border-bottom-color: greenyellow;border-bottom-width: 1px;border-bottom-style: solid;padding-bottom: 5px;">
     <label for="packageId">数据导入</label>
     <form name="upfile_form" action="./upfile" method="POST" enctype="multipart/form-data" target="check_file_frame">
         <input type="file" name="image" id="upload_file" accept="text/csv" />
@@ -57,17 +92,15 @@
     <a style="margin-top: 10px"  id="packageManage" href="http://www.baidu.com" target="_blank">数据管理</a>
     <a style="margin-top: 10px"  id="bStateCompare" href="./stateCompare" target="_blank">比对州名</a>
 </div>
-
+<p style="padding-top: 5px"></p>
 <label for="packageId">选择添加邮件的包</label>
 
-<select style="width: 150px;" name="packageId" id="packageId">
+<select style="width: 150px;" name="packageSelect" id="packageSelect">
     <option value=""></option>
-    <option value="d">dddddddddddddd</option>
-    <option value="s">dddddfffff</option>
 </select>
 <button style="margin-left: 20px" name="addNewPackage" id="addNewPackage">创建新包</button>
 <br/>
-<input style="width: 300px;height: 28px;margin-top: 20px" name="mailId" id="mailId" type="text"/>
+<input name="mailId" id="mailId" type="text"/>
 
 <p>&nbsp;</p>
 <table id="upBackInfo">

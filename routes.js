@@ -8,7 +8,8 @@ var user = require('./controllers/user');
 var fileLoad = require('./controllers/fileLoad')
     ,mailePackageManage = require('./controllers/mailePackageManage')
     ,stateCompare = require('./controllers/cStateCompare')
-    ,admin = require('./controllers/admin');
+    ,admin = require('./controllers/admin')
+    ,mailManage = require('./controllers/mailManage') ;
 
 module.exports = function (app) {
     // home page
@@ -27,6 +28,7 @@ module.exports = function (app) {
     app.post('/upfile', fileLoad.fileUp);
     app.post('/fileToDb', fileLoad.fileUpToDB);
     app.post('/addMailPackage', mailePackageManage.addNewPackage);
+    app.post('/insertMailToPackage',mailManage.insertMailToPackage);
     app.get('/getMailPackage', mailePackageManage.getDataByLen);
     app.get('/getMailPackageInfo', mailePackageManage.getManageDataByLen);
 };

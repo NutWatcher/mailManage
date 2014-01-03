@@ -111,3 +111,20 @@ function getMailPackageInfo(start, len, cb){
         }
     })
 }
+function insertMailToPackage(mailName, packageId){
+    $.ajax({
+        method: 'POST',
+        url: './insertMailToPackage',
+        data:{
+            mailName : mailName,
+            packageId: packageId
+        },
+        success: function(msg){
+            cb(msg);
+        },
+        error: function(xmlHttpRequest, err){
+            alert(error.toString());
+            $('#pInfo').text("返回信息失败！！！" + error.toString());
+        }
+    })
+}
