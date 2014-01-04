@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="27488fa2-f009-4d06-8a55-1f86eb4dc46d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/ajax_file.js" afterPath="$PROJECT_DIR$/public/javascripts/ajax_file.js" />
+    <list default="true" id="27488fa2-f009-4d06-8a55-1f86eb4dc46d" name="Default" comment="20140104-23:00&#10;">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/batchFileManage.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/exportFile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/fileUpload.ejs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dao/mailDao.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/stylesheets/my.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mailManage.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="27488fa2-f009-4d06-8a55-1f86eb4dc46d" time="1388845095937" ignored="false" />
+    <file path="/Dummy.txt" changelist="27488fa2-f009-4d06-8a55-1f86eb4dc46d" time="1388845304872" ignored="false" />
     <file path="/cc.ejs" changelist="27488fa2-f009-4d06-8a55-1f86eb4dc46d" time="1388844846039" ignored="false" />
     <file path="/check_file.js" changelist="27488fa2-f009-4d06-8a55-1f86eb4dc46d" time="1388288310980" ignored="false" />
     <file path="/tMailPackageDao.js" changelist="27488fa2-f009-4d06-8a55-1f86eb4dc46d" time="1388804617230" ignored="false" />
@@ -72,7 +76,7 @@
       <file leaf-file-name="ajax_file.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/javascripts/ajax_file.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="101" column="39" selection-start="2693" selection-end="2693" vertical-scroll-proportion="0.33251232">
+            <state line="93" column="49" selection-start="2512" selection-end="2512" vertical-scroll-proportion="0.14532019">
               <folding />
             </state>
           </provider>
@@ -399,7 +403,11 @@
       <created>1388845099908</created>
       <updated>1388845099908</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="20140104-23:00&#10;">
+      <created>1388845215380</created>
+      <updated>1388845215380</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -493,7 +501,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="20140104-22:06&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="20140104-23:00&#10;" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -513,6 +521,7 @@
     <MESSAGE value="20131228-22:05&#10;" />
     <MESSAGE value="20131228-22:06&#10;" />
     <MESSAGE value="20140104-22:06&#10;" />
+    <MESSAGE value="20140104-23:00&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -669,7 +678,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/ajax_file.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="39" selection-start="2693" selection-end="2693" vertical-scroll-proportion="0.33251232">
+        <state line="93" column="49" selection-start="2512" selection-end="2512" vertical-scroll-proportion="0.14532019">
           <folding />
         </state>
       </provider>

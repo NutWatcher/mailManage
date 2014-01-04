@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>无标题文档</title>
+    <link rel='stylesheet' href='./stylesheets/reset.css'/>
+    <link rel="stylesheet" href="./themes/jquery-ui.min.css">
+    <link rel="stylesheet" href="./stylesheets/my.css">
+
+    <script src="./javascripts/jquery-1.9.1.js"></script>
+    <script src="./javascripts/ajax_file.js"></script>
+    <script src="./javascripts/jquery-ui.min.js"></script>
+    <script>
+        $(function () {
+            $.ajaxSetup({cache: false});
+            $("#navigation a").button();
+        });
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+<div id="navigation" style="border-bottom-color: greenyellow;border-bottom-width: 1px;border-bottom-style: solid;padding-bottom: 5px;">
+    <a style="margin-top: 10px"  href="./mailManage" >扫描邮件</a>
+    <a style="margin-top: 10px"  href="./packageManage" >数据管理</a>
+    <a style="margin-top: 10px"  href="./stateCompare" >比对州名</a>
+    <a style="margin-top: 10px"  href="./fileUpload">数据导入</a>
+</div>
+<div>
+    <label>数据导入</label>
+    <form name="upfile_form" action="./upfile" method="POST" enctype="multipart/form-data" target="check_file_frame">
+        <input type="file" name="image" id="upload_file" accept="text/csv"/>
+        <input id="submitfile" type="submit" value="上传文件"/>
+        <span style="color:red;margin-left: 20px"> 文件名不能带有'\'</span>
+        <p id="fileUpInfo"></p>
+        <p id="pInfo"></p>
+    </form>
+</div>
+<p style="padding-top: 5px"></p>
+
+<p>&nbsp;</p>
+<table id="upBackInfo">
+    <thead>
+    <tr>
+        <td>错误信息</td>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+<iframe name="check_file_frame" style="display:none;"></iframe>
+</body>
+</html>
