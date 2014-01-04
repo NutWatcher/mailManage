@@ -15,19 +15,19 @@ exports.insertPackageId = function(packageId , mailName ,cb ){
     Db.queryDb(strSql,cb);
 };
 exports.getMailInfo = function(mailName ,cb ){
-    var strSql = "SELECT * FROM test.mailinfo where mailAccount = '"+ mailName +"';";
+    var strSql = "SELECT * FROM mailinfo where mailAccount = '"+ mailName +"';";
     Db.queryDb(strSql,cb);
 };
 exports.getMailByPackageId = function(packageId ,cb ){
-    var strSql = "SELECT * FROM test.mailinfo where packageId = '"+ packageId +"';";
+    var strSql = "SELECT * FROM mailinfo where packageId = '"+ packageId +"';";
     Db.queryDb(strSql,cb);
 };
 exports.delBatchFile = function(fileName ,cb ){
-    var strSql = "DELETE FROM `test`.`tbatchfile` WHERE `cBatchFileName`='"+ fileName +"';";
+    var strSql = "DELETE FROM `tbatchfile` WHERE `cBatchFileName`='"+ fileName +"';";
     Db.queryDb(strSql,cb);
 };
 exports.delMailWithBatchFileName = function(fileName ,cb ){
-    var strSql = "DELETE FROM test.mailinfo where batchId = " +
-        "(SELECT idtBatchFile FROM test.tbatchfile where cBatchFileName = '"+ fileName +"');";
+    var strSql = "DELETE FROM mailinfo where batchId = " +
+        "(SELECT idtBatchFile FROM tbatchfile where cBatchFileName = '"+ fileName +"');";
     Db.queryDb(strSql,cb);
 };

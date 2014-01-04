@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="27488fa2-f009-4d06-8a55-1f86eb4dc46d" name="Default" comment="20140104-23:00&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/batchFileManage.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/exportFile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/fileUpload.ejs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dao/mailDao.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/stylesheets/my.css" />
+    <list default="true" id="27488fa2-f009-4d06-8a55-1f86eb4dc46d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/fileUploadDao.js" afterPath="$PROJECT_DIR$/dao/fileUploadDao.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/mailDao.js" afterPath="$PROJECT_DIR$/dao/mailDao.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mailManage.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="27488fa2-f009-4d06-8a55-1f86eb4dc46d" time="1388845304872" ignored="false" />
+    <file path="/Dummy.txt" changelist="27488fa2-f009-4d06-8a55-1f86eb4dc46d" time="1388845839756" ignored="false" />
     <file path="/cc.ejs" changelist="27488fa2-f009-4d06-8a55-1f86eb4dc46d" time="1388844846039" ignored="false" />
     <file path="/check_file.js" changelist="27488fa2-f009-4d06-8a55-1f86eb4dc46d" time="1388288310980" ignored="false" />
     <file path="/tMailPackageDao.js" changelist="27488fa2-f009-4d06-8a55-1f86eb4dc46d" time="1388804617230" ignored="false" />
@@ -48,51 +45,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="cc.ejs" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/cc.ejs">
+      <file leaf-file-name="fileUploadDao.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dao/fileUploadDao.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="45" selection-start="3710" selection-end="3710" vertical-scroll-proportion="-9.428572">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#div#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#div#3;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#1;n#div#3;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#div#4;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ajax_file.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/ajax_file.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="49" selection-start="2512" selection-end="2512" vertical-scroll-proportion="0.14532019">
+            <state line="19" column="41" selection-start="750" selection-end="750" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="packageManage.ejs" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/packageManage.ejs">
+      <file leaf-file-name="mailDao.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dao/mailDao.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="35" selection-start="1850" selection-end="1850" vertical-scroll-proportion="-4.642857">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="30" column="35" selection-start="1071" selection-end="1071" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stateCompareDao.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dao/stateCompareDao.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tMailPackageDao.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dao/tMailPackageDao.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -115,7 +99,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/dao/tMailPackageDao.js" />
         <option value="$PROJECT_DIR$/views/admin.ejs" />
         <option value="$PROJECT_DIR$/controllers/fileLoad.js" />
         <option value="$PROJECT_DIR$/views/stateCompare.ejs" />
@@ -127,10 +110,11 @@
         <option value="$PROJECT_DIR$/controllers/batchFileManage.js" />
         <option value="$PROJECT_DIR$/views/packageManage.ejs" />
         <option value="$PROJECT_DIR$/routes.js" />
-        <option value="$PROJECT_DIR$/dao/mailDao.js" />
         <option value="$PROJECT_DIR$/views/cc.ejs" />
         <option value="$PROJECT_DIR$/controllers/mailManage.js" />
         <option value="$PROJECT_DIR$/public/javascripts/ajax_file.js" />
+        <option value="$PROJECT_DIR$/dao/fileUploadDao.js" />
+        <option value="$PROJECT_DIR$/dao/mailDao.js" />
       </list>
     </option>
   </component>
@@ -166,7 +150,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -297,6 +280,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -407,7 +391,11 @@
       <created>1388845215380</created>
       <updated>1388845215380</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="20140104-23:01&#10;">
+      <created>1388845373019</created>
+      <updated>1388845373019</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -434,7 +422,6 @@
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936978" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936978" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -449,6 +436,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295964" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -501,7 +489,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="20140104-23:00&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="20140104-23:01&#10;" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -522,6 +510,7 @@
     <MESSAGE value="20131228-22:06&#10;" />
     <MESSAGE value="20140104-22:06&#10;" />
     <MESSAGE value="20140104-23:00&#10;" />
+    <MESSAGE value="20140104-23:01&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -536,41 +525,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/stateCompare.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="47" selection-start="527" selection-end="596" vertical-scroll-proportion="0.42473918">
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dao/tMailPackageDao.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="64" selection-start="788" selection-end="788" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="19" selection-start="154" selection-end="154" vertical-scroll-proportion="0.14637904">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/my.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="62" selection-start="397" selection-end="397" vertical-scroll-proportion="0.6738197">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/errLog.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -580,105 +534,93 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/exportFile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="45" selection-start="1218" selection-end="1218" vertical-scroll-proportion="0.5344585">
-          <folding>
-            <element signature="e#0#154#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="35" column="45" selection-start="1218" selection-end="1218" vertical-scroll-proportion="0.5344585" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/packageManage.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="35" selection-start="1850" selection-end="1850" vertical-scroll-proportion="-4.642857">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="47" column="35" selection-start="1850" selection-end="1850" vertical-scroll-proportion="0.024173029">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/fileLoad.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="197" selection-end="279" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="9" column="0" selection-start="197" selection-end="279" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/mailePackageManage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="62" selection-start="260" selection-end="260" vertical-scroll-proportion="0.30645162">
-          <folding />
-        </state>
+        <state line="9" column="62" selection-start="260" selection-end="260" vertical-scroll-proportion="0.30645162" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/batchFileManage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="55" selection-start="800" selection-end="800" vertical-scroll-proportion="0.61290324">
-          <folding>
-            <element signature="e#0#154#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="24" column="55" selection-start="800" selection-end="800" vertical-scroll-proportion="0.61290324" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/startApp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="102" selection-start="699" selection-end="699" vertical-scroll-proportion="-0.44265231">
+        <state line="29" column="102" selection-start="699" selection-end="699" vertical-scroll-proportion="-0.44265231" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/mailManage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="34" selection-start="822" selection-end="822" vertical-scroll-proportion="0.29802954" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="133" selection-start="1579" selection-end="1579" vertical-scroll-proportion="0.81280786" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/ajax_file.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="122" column="96" selection-start="3237" selection-end="3237" vertical-scroll-proportion="0.3034398">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/cc.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="45" selection-start="3710" selection-end="3710" vertical-scroll-proportion="-9.428572">
+        <state line="89" column="45" selection-start="3710" selection-end="3710" vertical-scroll-proportion="0.024173029">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/baseDao.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.14004914">
           <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#div#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#div#3;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#1;n#div#3;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#div#4;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/mailManage.js">
+    <entry file="file://$PROJECT_DIR$/dao/fileUploadDao.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="34" selection-start="822" selection-end="822" vertical-scroll-proportion="0.29802954">
-          <folding>
-            <element signature="e#0#154#0" expanded="false" />
-          </folding>
+        <state line="19" column="41" selection-start="750" selection-end="750" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dao/mailDao.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="2" selection-start="1182" selection-end="1182" vertical-scroll-proportion="0.60837436">
+        <state line="30" column="35" selection-start="1071" selection-end="1071" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes.js">
+    <entry file="file://$PROJECT_DIR$/dao/stateCompareDao.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="133" selection-start="1579" selection-end="1579" vertical-scroll-proportion="0.81280786">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/ajax_file.js">
+    <entry file="file://$PROJECT_DIR$/dao/tMailPackageDao.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="49" selection-start="2512" selection-end="2512" vertical-scroll-proportion="0.14532019">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

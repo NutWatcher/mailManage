@@ -17,6 +17,6 @@ exports.insertMail = function(mails ,cb ){
     Db.queryDb(str,cb);
 }
 exports.getBatchId = function(fileName ,cb ){
-    var str = " SELECT idtBatchFile FROM test.tbatchfile where cBatchFileName = '"+ fileName +"'" ;
+    var str = " SELECT idtBatchFile FROM tbatchfile where cBatchFileName = '"+ fileName +"'" ;
     Db.queryDb(str,cb);
 }
