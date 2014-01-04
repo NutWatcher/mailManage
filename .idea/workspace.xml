@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27488fa2-f009-4d06-8a55-1f86eb4dc46d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/ajax_file.js" afterPath="$PROJECT_DIR$/public/javascripts/ajax_file.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mailManage.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="27488fa2-f009-4d06-8a55-1f86eb4dc46d" time="1388845041116" ignored="false" />
+    <file path="/Dummy.txt" changelist="27488fa2-f009-4d06-8a55-1f86eb4dc46d" time="1388845095937" ignored="false" />
     <file path="/cc.ejs" changelist="27488fa2-f009-4d06-8a55-1f86eb4dc46d" time="1388844846039" ignored="false" />
     <file path="/check_file.js" changelist="27488fa2-f009-4d06-8a55-1f86eb4dc46d" time="1388288310980" ignored="false" />
     <file path="/tMailPackageDao.js" changelist="27488fa2-f009-4d06-8a55-1f86eb4dc46d" time="1388804617230" ignored="false" />
@@ -15,7 +16,7 @@
     <file path="/fragment.js" changelist="27488fa2-f009-4d06-8a55-1f86eb4dc46d" time="1388839521330" ignored="false" />
     <file path="/mailManage.js" changelist="27488fa2-f009-4d06-8a55-1f86eb4dc46d" time="1388844960452" ignored="false" />
     <file path="/mailDao.js" changelist="27488fa2-f009-4d06-8a55-1f86eb4dc46d" time="1388842916709" ignored="false" />
-    <file path="/ajax_file.js" changelist="27488fa2-f009-4d06-8a55-1f86eb4dc46d" time="1388844456307" ignored="false" />
+    <file path="/ajax_file.js" changelist="27488fa2-f009-4d06-8a55-1f86eb4dc46d" time="1388845198548" ignored="false" />
     <file path="/fileLoad.js" changelist="27488fa2-f009-4d06-8a55-1f86eb4dc46d" time="1388814543102" ignored="false" />
     <file path="/my.css" changelist="27488fa2-f009-4d06-8a55-1f86eb4dc46d" time="1388820510383" ignored="false" />
     <file path="/packageManage.ejs" changelist="27488fa2-f009-4d06-8a55-1f86eb4dc46d" time="1388844311186" ignored="false" />
@@ -68,39 +69,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ajax_file.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ajax_file.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/javascripts/ajax_file.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="156" column="18" selection-start="4087" selection-end="4096" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="46" selection-start="1282" selection-end="1291" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mailManage.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/controllers/mailManage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="92" selection-start="1223" selection-end="1223" vertical-scroll-proportion="0.5788177">
-              <folding>
-                <element signature="e#0#154#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mailDao.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dao/mailDao.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="2" selection-start="1182" selection-end="1182" vertical-scroll-proportion="0.0">
+            <state line="101" column="39" selection-start="2693" selection-end="2693" vertical-scroll-proportion="0.33251232">
               <folding />
             </state>
           </provider>
@@ -150,11 +122,11 @@
         <option value="$PROJECT_DIR$/controllers/exportFile.js" />
         <option value="$PROJECT_DIR$/controllers/batchFileManage.js" />
         <option value="$PROJECT_DIR$/views/packageManage.ejs" />
-        <option value="$PROJECT_DIR$/public/javascripts/ajax_file.js" />
         <option value="$PROJECT_DIR$/routes.js" />
         <option value="$PROJECT_DIR$/dao/mailDao.js" />
         <option value="$PROJECT_DIR$/views/cc.ejs" />
         <option value="$PROJECT_DIR$/controllers/mailManage.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/ajax_file.js" />
       </list>
     </option>
   </component>
@@ -419,7 +391,15 @@
       <created>1388845045930</created>
       <updated>1388845045930</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="20140104-22:06&#10;">
+      <created>1388845063500</created>
+      <updated>1388845063500</updated>
+    </task>
+    <task id="LOCAL-00008" summary="20140104-22:06&#10;">
+      <created>1388845099908</created>
+      <updated>1388845099908</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -664,33 +644,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes.js">
+    <entry file="file://$PROJECT_DIR$/controllers/mailManage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="46" selection-start="1282" selection-end="1291" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="25" column="34" selection-start="822" selection-end="822" vertical-scroll-proportion="0.29802954">
+          <folding>
+            <element signature="e#0#154#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dao/mailDao.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="2" selection-start="1182" selection-end="1182" vertical-scroll-proportion="0.0">
+        <state line="32" column="2" selection-start="1182" selection-end="1182" vertical-scroll-proportion="0.60837436">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="133" selection-start="1579" selection-end="1579" vertical-scroll-proportion="0.81280786">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/ajax_file.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="18" selection-start="4087" selection-end="4096" vertical-scroll-proportion="0.0">
+        <state line="101" column="39" selection-start="2693" selection-end="2693" vertical-scroll-proportion="0.33251232">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/mailManage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="92" selection-start="1223" selection-end="1223" vertical-scroll-proportion="0.5788177">
-          <folding>
-            <element signature="e#0#154#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>

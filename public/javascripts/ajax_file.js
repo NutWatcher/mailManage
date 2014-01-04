@@ -99,7 +99,7 @@ function getMailPackageInfo(start, len, cb){
         success: function(msg){
             cb(msg);
         },
-        error: function(xmlHttpRequest, err){
+        error: function(xmlHttpRequests, err){
             alert(error.toString());
             $('#pInfo').text("获取包信息失败！！！" + error.toString());
         }
