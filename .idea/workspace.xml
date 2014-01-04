@@ -2,23 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27488fa2-f009-4d06-8a55-1f86eb4dc46d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/admin.ejs" afterPath="$PROJECT_DIR$/views/admin.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/ajax_file.js" afterPath="$PROJECT_DIR$/public/javascripts/ajax_file.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/runConfigurations/app_js.xml" afterPath="$PROJECT_DIR$/.idea/runConfigurations/app_js.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/cc.ejs" afterPath="$PROJECT_DIR$/views/cc.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.json" afterPath="$PROJECT_DIR$/config.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/fileLoad.js" afterPath="$PROJECT_DIR$/controllers/fileLoad.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/mailePackageManage.js" afterPath="$PROJECT_DIR$/controllers/mailePackageManage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/packageManage.ejs" afterPath="$PROJECT_DIR$/views/packageManage.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes.js" afterPath="$PROJECT_DIR$/routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/startApp.js" afterPath="$PROJECT_DIR$/controllers/startApp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/stateCompare.ejs" afterPath="$PROJECT_DIR$/views/stateCompare.ejs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/tMailPackageDao.js" afterPath="$PROJECT_DIR$/dao/tMailPackageDao.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mailManage.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="27488fa2-f009-4d06-8a55-1f86eb4dc46d" time="1388796678943" ignored="false" />
+    <file path="/Dummy.txt" changelist="27488fa2-f009-4d06-8a55-1f86eb4dc46d" time="1388845041116" ignored="false" />
     <file path="/cc.ejs" changelist="27488fa2-f009-4d06-8a55-1f86eb4dc46d" time="1388844846039" ignored="false" />
     <file path="/check_file.js" changelist="27488fa2-f009-4d06-8a55-1f86eb4dc46d" time="1388288310980" ignored="false" />
     <file path="/tMailPackageDao.js" changelist="27488fa2-f009-4d06-8a55-1f86eb4dc46d" time="1388804617230" ignored="false" />
@@ -101,7 +89,7 @@
       <file leaf-file-name="mailManage.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/mailManage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="34" selection-start="933" selection-end="933" vertical-scroll-proportion="0.36977887">
+            <state line="37" column="92" selection-start="1223" selection-end="1223" vertical-scroll-proportion="0.5788177">
               <folding>
                 <element signature="e#0#154#0" expanded="false" />
               </folding>
@@ -427,7 +415,11 @@
       <created>1388241843764</created>
       <updated>1388241843764</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="20140104-22:06&#10;">
+      <created>1388845045930</created>
+      <updated>1388845045930</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -454,6 +446,7 @@
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936978" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936978" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -468,7 +461,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295964" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -521,7 +513,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="20131228-22:06&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="20140104-22:06&#10;" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -540,6 +532,7 @@
     <MESSAGE value="20131228-22:04&#10;" />
     <MESSAGE value="20131228-22:05&#10;" />
     <MESSAGE value="20131228-22:06&#10;" />
+    <MESSAGE value="20140104-22:06&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -694,7 +687,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/mailManage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="34" selection-start="933" selection-end="933" vertical-scroll-proportion="0.36977887">
+        <state line="37" column="92" selection-start="1223" selection-end="1223" vertical-scroll-proportion="0.5788177">
           <folding>
             <element signature="e#0#154#0" expanded="false" />
           </folding>
