@@ -9,6 +9,9 @@ var format = require('util').format
 var config = require('../config');
 var fileUploadDb = require('../dao/fileUploadDao');
 var log = require('./errLog');
+exports.index = function(req, res, next){
+    res.render('fileUpload',{});
+};
 exports.fileUp = function(req, res, next){
     if ( req.files != undefined && req.files.image.size != 0){
         if ( req.files.image.name.indexOf("\\") != -1 ){

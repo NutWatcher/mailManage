@@ -32,6 +32,7 @@ var makeChildDir = function(){
     startMakeDir(config.fileDir + config.fileUpLoadDir);
     startMakeDir(config.fileDir + config.fileInitDir);
     startMakeDir(config.fileDir + config.fileLogDir);
+    startMakeDir(config.fileDir + config.fileExportDir);
 };
 exports.startApp = function(){
     baseDb.createTableDb(function(err){

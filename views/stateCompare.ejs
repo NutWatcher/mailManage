@@ -5,11 +5,15 @@
     <title>无标题文档</title>
     <link rel='stylesheet' href='/stylesheets/reset.css'/>
     <link rel="stylesheet" href="./themes/jquery-ui.min.css">
-    <script src="./javascripts/check_file.js"></script>
+    <link rel="stylesheet" href="./stylesheets/my.css">
+
+    <script src="./javascripts/ajax_file.js"></script>
     <script src="./javascripts/jquery-1.9.1.js"></script>
     <script src="./javascripts/jquery-ui.min.js"></script>
     <script>
         $(function () {
+            $.ajaxSetup({cache: false});
+            $("#navigation a").button();
             $("button").button() ;
             $("#toCompare").on("click",function(){
                 $.ajax({
@@ -48,9 +52,13 @@
         }
     </style>
 </head>
-<body style="padding: 0px;width: 100%">
-<hr width="50%">
-<hr width="50%">
+<body style="width: 94%">
+<div id="navigation" style="border-bottom-color: greenyellow;border-bottom-width: 1px;border-bottom-style: solid;padding-bottom: 5px;">
+    <a style="margin-top: 10px"  href="./mailManage" >扫描邮件</a>
+    <a style="margin-top: 10px"  href="./packageManage" >数据管理</a>
+    <a style="margin-top: 10px"  href="./stateCompare" >比对州名</a>
+    <a style="margin-top: 10px"  href="./fileUpload">数据导入</a>
+</div>
 <div style="width: 45%;float: left"><textarea id="textIn"></textarea></div>
 <div style="width: 10%;float: left;text-align: center">
     <button id="toCompare" style="margin-top: 250px">比对>></button>

@@ -19,6 +19,10 @@ exports.insertData= function(data ,cb ){
     Db.queryDb("INSERT INTO `tmailpackage` (`tMailPackageName`) VALUES ('"+ data.tMailPackageName +"');",cb);
 };
 exports.getLatestData= function(cb ){
-    var srSql = "SELECT * FROM tmailpackage order by idtMailPackage desc limit 1;" ;
-    Db.queryDb(srSql,cb);
+    var strSql = "SELECT * FROM tmailpackage order by idtMailPackage desc limit 1;" ;
+    Db.queryDb(strSql,cb);
+};
+exports.getMailPackageMailCount= function(packageId, cb ){
+    var strSql = "SELECT count(*) num FROM mailinfo where packageId = '"+ packageId +"';";
+    Db.queryDb(strSql,cb);
 };

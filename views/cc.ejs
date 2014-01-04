@@ -5,110 +5,245 @@
     <title>无标题文档</title>
     <link rel='stylesheet' href='./stylesheets/reset.css'/>
     <link rel="stylesheet" href="./themes/jquery-ui.min.css">
-    <script src="./javascripts/ajax_file.js"></script>
+    <link rel="stylesheet" href="./stylesheets/my.css">
+
     <script src="./javascripts/jquery-1.9.1.js"></script>
+    <script src="./javascripts/ajax_file.js"></script>
     <script src="./javascripts/jquery-ui.min.js"></script>
     <script>
-        var addPackageSelect = function(data){
-            var s = $("#packageSelect");
-            s.empty();
-            s.append("<option value=''></option>");
-            for ( var i = 0 ; i < data.length ; i ++ ){
-                s.append("<option value='"+ data[i].idtMailPackage +"'>"+ data[i].idtMailPackage +"</option>");
-            }
-        };
-        $(function () {
-            getMailPackage(50, function(msgTemp){
-                if (msgTemp.success == true){
-                    addPackageSelect(msgTemp.data);
+        var tOdd = true;
+        var resetPackageSelect = function () {
+            getMailPackage(50, function (msgTemp) {
+                if (msgTemp.success == true) {
+                    var s = $("#packageSelect");
+                    var sF = $("#packageId");
+                    s.empty();
+                    sF.empty();
+                    s.append("<option value=''></option>");
+                    for (var i = 0; i < msgTemp.data.length; i++) {
+                        s.append("<option value='" + msgTemp.data[i].idtMailPackage + "'>" + msgTemp.data[i].idtMailPackage + "</option>");
+                        sF.append("<option value='" + msgTemp.data[i].idtMailPackage + "'>" + msgTemp.data[i].idtMailPackage + "</option>");
+                    }
                 }
-                else{
+                else {
                     alert("获取包信息失败！！！");
-                    $('#pInfo').text(msg.msg);
+                    $('#pInfo').text(msgTemp.data);
                 }
             });
-            $("#packageManage").button();
-            $("#bStateCompare").button();
+        };
+        $(function () {
+            $.ajaxSetup({cache: false});
+            resetPackageSelect();
+            $("#navigation a").button();
+            $("#exportForm").dialog({
+                autoOpen: false,
+                height: 250,
+                width: 480,
+                modal: true,
+                buttons: {
+                    "确定": function() {
+                        $("#exportForm form").submit();
+                        $( this ).dialog( "close" );
+                    },
+                    "取消": function() {
+                        $( this ).dialog( "close" );
+                    }
+                }
+
+            });
             $("#addNewPackage")
-                .button()
-                .on('click', function(event){
-                        event.stopPropagation() ;
-                        addMailPackage(function(msg){
-                            if (msg.success == true){
-                                getMailPackage(50, function(msgTemp){
-                                    if (msgTemp.success == true){
-                                        alert("新建包名:" + msg.data);
-                                        addPackageSelect(msgTemp.data);
-                                    }
-                                    else{
-                                        alert("获取包信息失败！！！");
-                                        $('#pInfo').text(msg.msg);
-                                    }
-                                });
+                    .button()
+                    .on('click', function (event) {
+                        event.stopPropagation();
+                        addMailPackage(function (msg) {
+                            if (msg.success == true) {
+                                alert("新建包名:" + msg.data);
+                                resetPackageSelect();
                             }
-                            else{
+                            else {
                                 alert("新建包失败！！！");
-                                $('#pInfo').text(msgTemp.msg);
+                                $('#pInfo').text(msg.data);
                             }
                         });
                     });
-            $('#mailId').keyup(function(e){
-                var key =  e.which;
-                if(key == 13){
-                    var packageId = $("#packageSelect").val();
-                    if ( packageId == '' ){
-                        alert("请选择包！！！");
-                        return;
+            $("#exportDataToTxt")
+                    .button()
+                    .on('click', function (event) {
+                        event.stopPropagation();
+                        $("#exportForm").dialog("open");
+                    });
+            $("#resetMail")
+                    .button()
+                    .on('click', function (event) {
+                        event.stopPropagation();
+                        var value = prompt('输入邮件条码：', '条码');
+                        if(value == null){
+                        }else if(value == ''){
+                            alert('输入为空，请重新输入！');
+                        }else{
+                            var mailName = value ;
+                            resetMail(mailName, function(msg){
+                                if (msg.success == true){
+                                    $('#pInfo').text(msg.data);
+                                }
+                                else{
+                                    alert("重置失败！！！");
+                                    $('#pInfo').text(msg.data);
+                                }
+                            });
+                        }
+                    });
+            $("#packageSelect").on('change', function () {
+                var packageId = $("#packageSelect").val();
+                getMailPackageMailCount(packageId, function (msg) {
+                    if (msg.success == true) {
+                        $('#mailCount').text(msg.data[0].num);
                     }
-                    alert(packageId);
+                    else {
+                        alert("获取包数量失败！！！");
+                        $('#pInfo').text(msg.data);
+                    }
+                });
+            });
+            $('#mailId').keydown(function (e) {
+                var key = e.keyCode;
+                if (key == 13) {
+                    var packageId = $("#packageSelect").val();
+                    var mailName = $("#mailId").val();
+                    if (packageId == '') {
+                        alert("请选择包！！！");
+                    }
+                    else {
+                        insertMailToPackage(mailName, packageId, function (msg) {
+                            if (msg.success == true) {
+                                $('#mailCount').text(parseInt($('#mailCount').text()) + 1);
+                                $("#mailId").val("");
+                                var tStr = "";
+                                if (tOdd == true) {
+                                    tStr = "<tr class='tEven'>";
+                                    tOdd = false;
+                                }
+                                else {
+                                    tStr = "<tr>";
+                                    tOdd = true;
+                                }
+                                tStr += "<td><span>" + msg.data.mailAccount + "</span></td>" +
+                                        "<td><span>" + msg.data.mailCountry + "</span></td>" +
+                                        "<td><span>" + msg.data.mailWeight + "</span></td></tr>";
+                                $('#upBackInfo').prepend(tStr);
+                            }
+                            else {
+                                alert(msg.data);
+                                $('#pInfo').text(msg.data);
+                            }
+                        });
+                    }
+                    return false;                       //阻止ie8自动提交表单
                 }
             });
         });
     </script>
     <style>
-        .tEven {
-           background-color: #ffead7;
-        }
         #mailId {
             width: 300px;
             height: 28px;
             margin-top: 20px;
-            font-size:20px;
-            line-height:28px;
+            font-size: 20px;
+            line-height: 28px;
         }
     </style>
 </head>
-<body style="padding: 30px">
-<div style="border-bottom-color: greenyellow;border-bottom-width: 1px;border-bottom-style: solid;padding-bottom: 5px;">
-    <label for="packageId">数据导入</label>
-    <form name="upfile_form" action="./upfile" method="POST" enctype="multipart/form-data" target="check_file_frame">
-        <input type="file" name="image" id="upload_file" accept="text/csv" />
-        <input id="submitfile" type="submit" value="上传文件"/>
-        <span style="color:red;margin-left: 20px"> 文件名不能带有'\'</span>
-        <iframe name="check_file_frame" style="display:none;"></iframe>
-        <p id="fileUpInfo"> </p>
-        <p id="pInfo"> </p>
-    </form>
-    <a style="margin-top: 10px"  id="packageManage" href="http://www.baidu.com" target="_blank">数据管理</a>
-    <a style="margin-top: 10px"  id="bStateCompare" href="./stateCompare" target="_blank">比对州名</a>
+<body>
+<div id="navigation"
+     style="border-bottom-color: greenyellow;border-bottom-width: 1px;border-bottom-style: solid;padding-bottom: 5px;">
+    <a style="margin-top: 10px" href="./mailManage">扫描邮件</a>
+    <a style="margin-top: 10px" href="./packageManage">数据管理</a>
+    <a style="margin-top: 10px" href="./stateCompare">比对州名</a>
+    <a style="margin-top: 10px" href="./fileUpload">数据导入</a>
 </div>
-<p style="padding-top: 5px"></p>
-<label for="packageId">选择添加邮件的包</label>
 
+<p id="pInfo"></p>
+
+<p style="padding-top: 5px"></p>
+
+<label for="packageSelect">选择添加邮件的包</label>
 <select style="width: 150px;" name="packageSelect" id="packageSelect">
     <option value=""></option>
 </select>
-<button style="margin-left: 20px" name="addNewPackage" id="addNewPackage">创建新包</button>
+<a style="margin-left: 20px" id="addNewPackage">创建新包</a>
+<a style="margin-left: 20px" id="exportDataToTxt">导出数据</a>
+<a style="margin-left: 20px" id="resetMail">重置邮件</a>
 <br/>
 <input name="mailId" id="mailId" type="text"/>
+<span style="padding-left: 20px;font-size: 18px">数量：<span name="mailCount" id="mailCount">0</span></span>
 
 <p>&nbsp;</p>
 <table id="upBackInfo">
     <thead>
-    <tr><th>错误信息</th></tr>
+    <tr>
+        <td>条码</td>
+        <td>国家</td>
+        <td>重量</td>
+    </tr>
     </thead>
     <tbody>
     </tbody>
 </table>
+
+<div id="exportForm" title="数据导出">
+    <form action="./exportTxt" method="post" target="_blank" >
+        <div>
+            <label for="date">包</label>
+            <select style="width: 150px;" name="packageId" id="packageId">
+                <option value="1">給据函件</option>
+                <option value="2">给据刷品</option>
+                <option value="3">普包</option>
+                <option value="4">快包</option>
+                <option value="5">特快</option>
+                <option value="6">给据账单</option>
+                <option value="7">给据商函</option>
+            </select>
+        </div>
+        <div>
+            <label for="branchId">机构编号</label>
+            <input type="text" name="branchId" id="branchId" class="">
+            <label for="userId">用户编号</label>
+            <input type="text" name="userId" id="userId" class="">
+        </div>
+        <div>
+            <label for="date">收寄日期</label>
+            <input type="text" name="date" id="date" class=""> (格式YYYYMMDD)
+        </div>
+        <div>
+            <label for="mailInfo">邮件种类</label>
+            <select style="width: 150px;" name="mailInfo" id="mailInfo">
+                <option value="1">給据函件</option>
+                <option value="2">给据刷品</option>
+                <option value="3">普包</option>
+                <option value="4">快包</option>
+                <option value="5">特快</option>
+                <option value="6">给据账单</option>
+                <option value="7">给据商函</option>
+            </select>
+            <label for="manageInfo">处理类型</label>
+            <select style="width: 150px;" name="manageInfo" id="manageInfo">
+                <option value="1">全信息</option>
+                <option value="2">实物规格相同</option>
+                <option value="3">有用户自编号的包裹、特快</option>
+                <option value="4">无用户自编号的包裹、特快</option>
+                <option value="5">有用户自编号的函件</option>
+                <option value="6">无用户自编号的函件</option>
+            </select>
+        </div>
+        <div>
+            <label for="printInfo">详情单打印要求</label>
+            <select style="width: 150px;" name="printInfo" id="printInfo">
+                <option value="">无需打印</option>
+                <option value="0">正常打印</option>
+                <option value="1">全信息打印</option>
+            </select>
+        </div>
+    </form>
+</div>
 </body>
 </html>

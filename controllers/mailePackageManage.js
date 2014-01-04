@@ -52,3 +52,15 @@ exports.getManageDataByLen = function (req, res, next){
         }
     } );
 };
+exports.getMailPackageMailCount = function (req, res, next){
+    mailPackageDB.getMailPackageMailCount(req.query.packageId, function(err, rows){
+        if (err){
+            log.error(err);
+            res.send({"success":false,"data":"获取数据信息出错！！！" + err.message });
+            return ;
+        }
+        else{
+            res.send({"success":true,"data":rows });
+        }
+    } );
+};

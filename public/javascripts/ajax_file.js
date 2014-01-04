@@ -26,10 +26,9 @@ function ajax_callback(result,info,filename) {
             alert("合法");
     }
     return ;
-}
+};
 function ajax_fileToDb(filename) {
     $('#upBackInfo tbody').empty();
-    $('#upBackInfo thead').empty();
     $.ajax({
         type: "POST",
         url: "./fileToDb",
@@ -46,16 +45,11 @@ function ajax_fileToDb(filename) {
                 $('#fileUpInfo').text("导入成功！！！");
                 $('#pInfo').text(msg.msg);
                 var t = $('#upBackInfo tbody');
-                $('#upBackInfo thead').append("<tr><th>错误信息</th></tr>");
                 for(var i = 0 ; i < msg.backInfo.length ; i ++ ){
                     var value = msg.backInfo[i];
-                    if(i%2 ==0){
-                        t.append("<tr><td class='tEven'>第"+ value.row +"条记录："+ value.msg +"</td></tr>");
-                    }
-                    else{
-                        t.append("<tr><td>第"+ value.row +"条记录："+ value.msg +"</td></tr>");
-                    }
+                    t.append("<tr><td><span>第"+ value.row +"条记录："+ value.msg +"</span></td></tr>");
                 }
+                t.find("tr:odd").addClass("tEven");
             }
         },
         error: function (xmlHttpRequest, error){
@@ -110,8 +104,24 @@ function getMailPackageInfo(start, len, cb){
             $('#pInfo').text("获取包信息失败！！！" + error.toString());
         }
     })
-}
-function insertMailToPackage(mailName, packageId){
+};
+function getMailPackageMailCount(packageId, cb){
+    $.ajax({
+        method: 'get',
+        url: './getMailPackageMailCount',
+        data:{
+            packageId : packageId
+        },
+        success: function(msg){
+            cb(msg);
+        },
+        error: function(xmlHttpRequest, err){
+            alert(error.toString());
+            $('#pInfo').text("获取包数量失败！！！" + error.toString());
+        }
+    })
+};
+function insertMailToPackage(mailName, packageId, cb){
     $.ajax({
         method: 'POST',
         url: './insertMailToPackage',
@@ -127,4 +137,36 @@ function insertMailToPackage(mailName, packageId){
             $('#pInfo').text("返回信息失败！！！" + error.toString());
         }
     })
-}
+};
+function delBatchFile(fileName, cb){
+    $.ajax({
+        method: 'POST',
+        url: './delBatchFile',
+        data:{
+            fileName : fileName
+        },
+        success: function(msg){
+            cb(msg);
+        },
+        error: function(xmlHttpRequest, err){
+            alert(error.toString());
+            $('#pInfo').text("删除失败！！！" + error.toString());
+        }
+    })
+};
+function resetMail(mailName, cb){
+    $.ajax({
+        method: 'POST',
+        url: './resetMail',
+        data:{
+            mailName : mailName
+        },
+        success: function(msg){
+            cb(msg);
+        },
+        error: function(xmlHttpRequest, err){
+            alert(error.toString());
+            $('#pInfo').text("删除失败！！！" + error.toString());
+        }
+    })
+};

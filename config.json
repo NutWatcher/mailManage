@@ -3,7 +3,8 @@
     ,"fileUpLoadDir":"./upLoadDir"
     ,"fileInitDir":"./initDir"
     ,"fileLogDir":"./logDir"
+    ,"fileExportDir":"./exportDir"
     ,"mysqlConfig":{"host": "localhost",
                         "port":"3306", "database":"test" ,
-                        "multipleStatements": "true", "user": "root","password": "root"}
+                        "multipleStatements": "true", "user": "root","password": "123123"}
 }
