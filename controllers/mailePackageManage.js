@@ -3,6 +3,7 @@
  */
 
 var mailPackageDB = require('../dao/tMailPackageDao')
+    ,batchFileDB = require('../dao/batchFileDAO')
     ,log = require('./errLog');
 exports.index = function (req, res, next) {
     res.render('packageManage',{});
@@ -63,4 +64,16 @@ exports.getMailPackageMailCount = function (req, res, next){
             res.send({"success":true,"data":rows });
         }
     } );
+};
+exports.getBatchFileCount = function (req, res, next){
+    batchFileDB.getCount(function(err, rows){
+        if (err){
+            log.error(err);
+            res.send({"success":false,"data":"获取数据信息出错！！！" + err.message });
+            return ;
+        }
+        else{
+            res.send({"success":true,"data":rows[0].count });
+        }
+    });
 };

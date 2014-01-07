@@ -11,7 +11,8 @@ var fileLoad = require('./controllers/fileLoad')
     ,admin = require('./controllers/admin')
     ,mailManage = require('./controllers/mailManage')
     ,exportFile = require('./controllers/exportFile')
-    ,batchFileManage = require('./controllers/batchFileManage');
+    ,batchFileManage = require('./controllers/batchFileManage')
+    ,waitMailManage = require('./controllers/waitMailManage');;
 
 module.exports = function (app) {
     // home page
@@ -21,6 +22,7 @@ module.exports = function (app) {
     app.get('/packageManage', mailePackageManage.index);
     app.get('/stateCompare', stateCompare.index);
     app.get('/fileUpload', fileLoad.index);
+    app.get('/waitMailManage', waitMailManage.index);
 
     app.get('/users', user.list);
 
@@ -37,6 +39,7 @@ module.exports = function (app) {
     app.get('/getMailPackage', mailePackageManage.getDataByLen);
     app.get('/getMailPackageInfo', mailePackageManage.getManageDataByLen);
     app.get('/getMailPackageMailCount',mailePackageManage.getMailPackageMailCount);
+    app.post('/getBatchFileCount',mailePackageManage.getBatchFileCount);
 
     app.post('/delBatchFile',batchFileManage.delBatchFile);
 

@@ -28,10 +28,10 @@
             for (var i = 0; i < data.length; i++) {
                 var value = data[i];
                 t.append("<tr><td><span>" + value.fileName +
-                        "</span></td><td><span>" + value.waitMail +
+                        "</span></td><td><span class='waitMail'batchId='"+ value.batchId +"'>" + value.waitMail +
                         "</span></td><td><span>" + value.mailNum +
                         "</span></td><td><span>" + value.packageNum + "</span></td>" +
-                        "<td><a fileName='"+ value.fileName +"'>删除</a></td></tr>");
+                        "<td><a class='tdDel' fileName='"+ value.fileName +"'>删除</a></td></tr>");
             }
             t.find("td span")
                 .hover(
@@ -42,7 +42,14 @@
                         $(this).removeClass("hover");
                     }
                 );
-            t.find("td a")
+            t.find("td span[class='waitMail']")
+                    .on('click',
+                    function (event) {
+                        event.stopPropagation();
+                        window.open('./waitMailManage?batchId='+$(this).attr('batchId'));
+                    }
+            );
+            t.find("td a[class='tdDel']")
                     .button()
                     .on('click',
                     function (event) {
@@ -82,6 +89,7 @@
                                 "mailNum": 0
                             };
                         }
+                        showData[dataTemp.batchId].batchId = dataTemp.batchId;
                         showData[dataTemp.batchId].fileName = dataTemp.cBatchFileName;
                         showData[dataTemp.batchId].mailNum += dataTemp.mailNum;
                         if (dataTemp.packageId == 0) {
@@ -96,15 +104,45 @@
                     }
                     insertTable(tableData, tableHead);
                 }
-                else {
+                else if(msg.success == false){
                     $("#pInfo").text(msg.data);
                 }
             })
         };
+        var getTablePageInfo = function(){
+            getBatchFileCount(function(msg){
+                if (msg.success == true) {
+                    var count = msg.data ;
+                    $('#totalCount').text(count + "条记录");
+                    $('#totalPage').text(parseInt(parseInt(count)/50 + 1).toString());
+                }
+                else if(msg.success == false){
+                    $("#pInfo").text(msg.data);
+                }
+            });
+        };
         $(function () {
             $.ajaxSetup({cache: false});
             $("#navigation a").button();
+            $('#nextPage').on('click',function(e){
+                e.stopPropagation();
+                var now = parseInt($('#nowPage').text());
+                var totalPage = parseInt($('#totalPage').text());
+                if (now < totalPage){
+                    getIndexInfo(50*now, 50);
+                    $('#nowPage').text((now+1).toString());
+                }
+            });
+            $('#prePage').on('click',function(e){
+                e.stopPropagation();
+                var now = parseInt($('#nowPage').text());
+                if (now > 1){
+                    getIndexInfo(50*(now-2), 50);
+                    $('#nowPage').text((now-1).toString());
+                }
+            })
             getIndexInfo(0, 50);
+            getTablePageInfo();
         });
     </script>
     <style>
@@ -141,8 +179,9 @@
     </tbody>
 </table>
 <div id="page">
-    <button>上一页</button>
-    <button>下一页</button>
+    <button id="prePage">上一页</button>
+    <span id="nowPage">1</span>/<span id="totalPage"></span>页<span style="padding-left: 5px" id="totalCount"></span>
+    <button id="nextPage">下一页</button>
 </div>
 
 </body>

@@ -18,7 +18,7 @@ exports.fileUp = function(req, res, next){
             res.render("fileUpBack",{"bValue":2,"info":"",fileName:""});
         }
         var tmp_path = req.files.image.path
-            ,target_path = config.fileDir + config.fileUpLoadDir + req.files.image.name;
+            ,target_path = config.fileDir + config.fileUpLoadDir + "/" +  req.files.image.name;
 
         var fileWriteStream = fs.createWriteStream(target_path)
             ,fileReadStream = fs.createReadStream(tmp_path);
@@ -114,7 +114,7 @@ var readMailInfo = function(filePath, idBatchFile,  res , next){
 }
 exports.fileUpToDB = function(req, res, next){
     var fileName =  req.body.filename ;
-    var filePath = config.fileDir + config.fileUpLoadDir + fileName;
+    var filePath = config.fileDir + config.fileUpLoadDir + "/" + fileName;
     fileUploadDb.insertBatch(fileName,function(err,rows){
         if (err) {
             log.error(err);

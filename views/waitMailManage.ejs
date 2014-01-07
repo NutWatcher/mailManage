@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>无标题文档</title>
+    <link rel='stylesheet' href='/stylesheets/reset.css'/>
+    <link rel="stylesheet" href="./themes/jquery-ui.min.css">
+    <link rel="stylesheet" href="./stylesheets/my.css">
+
+    <script src="./javascripts/ajax_file.js"></script>
+    <script src="./javascripts/jquery-1.9.1.js"></script>
+    <script src="./javascripts/jquery-ui.min.js"></script>
+    <script>
+    </script>
+    <style>
+
+        tbody td {
+            border-bottom: 1px solid #ddd;
+        }
+
+        #page {
+            padding-top: 20px;
+            text-align: center;
+            width: 500px;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+<p><%=pInfo%></p>
+<p style="text-align: center;color: red;font-size: 20px"><%=batchFileName%> 共：<%= data.length%>条剩余</p>
+<table>
+    <thead>
+    <tr>
+        <td>条码</td>
+        <td>国家</td>
+        <td>重量</td>
+    </tr>
+    </thead>
+    <tbody>
+    <% for(var i=0; i<data.length; i++) { %>
+    <tr>
+        <td><%= data[i].mailAccount %></td>
+        <td><%= data[i].mailCountry %></td>
+        <td><%= data[i].mailWeight %></td>
+    </tr>
+    <% } %>
+    </tbody>
+</table>
+<div id="page">
+    <button>上一页</button>
+    <button>下一页</button>
+</div>
+
+</body>
+</html>

@@ -6,6 +6,9 @@ exports.insertBatch = function(fileName ,cb ){
     Db.queryDb("INSERT INTO `tbatchfile` (`cBatchFileName`) VALUES ('"+ fileName +"');",cb);
 }
 exports.insertMail = function(mails ,cb ){
+    if (mails.length == 0 ){
+        cb({"message":"数据为空"});
+    }
     var str = "INSERT INTO `mailinfo` ( `mailAccount`, `mailCountry`, `mailWeight`, `packageId`, `batchId`) VALUES " ;
     for (var i = 0 ; i < mails.length ; i ++ ){
         if (i != 0){

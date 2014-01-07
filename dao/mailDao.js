@@ -31,3 +31,7 @@ exports.delMailWithBatchFileName = function(fileName ,cb ){
         "(SELECT idtBatchFile FROM tbatchfile where cBatchFileName = '"+ fileName +"');";
     Db.queryDb(strSql,cb);
 };
+exports.getWaitMailByBatchId = function(batchId ,cb ){
+    var strSql = "SELECT * FROM mailinfo where batchId = '"+ batchId +"' and packageId = '0';";
+    Db.queryDb(strSql,cb);
+};

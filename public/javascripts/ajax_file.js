@@ -67,8 +67,8 @@ function addMailPackage(cb){
             cb(msg);
         },
         error: function(xmlHttpRequest, err){
-            alert(error.toString());
-            $('#pInfo').text("新建包失败！！！" + error.toString());
+            alert(err.toString());
+            $('#pInfo').text("新建包失败！！！" + err.toString());
         }
     })
 };
@@ -83,8 +83,8 @@ function getMailPackage(len, cb){
             cb(msg);
         },
         error: function(xmlHttpRequest, err){
-            alert(error.toString());
-            $('#pInfo').text("获取包信息失败！！！" + error.toString());
+            alert(err.toString());
+            $('#pInfo').text("获取包信息失败！！！" + err.toString());
         }
     })
 };
@@ -100,8 +100,8 @@ function getMailPackageInfo(start, len, cb){
             cb(msg);
         },
         error: function(xmlHttpRequests, err){
-            alert(error.toString());
-            $('#pInfo').text("获取包信息失败！！！" + error.toString());
+            alert(err.toString());
+            $('#pInfo').text("获取包信息失败！！！" + err.toString());
         }
     })
 };
@@ -116,8 +116,8 @@ function getMailPackageMailCount(packageId, cb){
             cb(msg);
         },
         error: function(xmlHttpRequest, err){
-            alert(error.toString());
-            $('#pInfo').text("获取包数量失败！！！" + error.toString());
+            alert(err.toString());
+            $('#pInfo').text("获取包数量失败！！！" + err.toString());
         }
     })
 };
@@ -133,8 +133,8 @@ function insertMailToPackage(mailName, packageId, cb){
             cb(msg);
         },
         error: function(xmlHttpRequest, err){
-            alert(error.toString());
-            $('#pInfo').text("返回信息失败！！！" + error.toString());
+            alert(err.toString());
+            $('#pInfo').text("返回信息失败！！！" + err.toString());
         }
     })
 };
@@ -149,8 +149,8 @@ function delBatchFile(fileName, cb){
             cb(msg);
         },
         error: function(xmlHttpRequest, err){
-            alert(error.toString());
-            $('#pInfo').text("删除失败！！！" + error.toString());
+            alert(err.toString());
+            $('#pInfo').text("删除失败！！！" + err.toString());
         }
     })
 };
@@ -165,8 +165,22 @@ function resetMail(mailName, cb){
             cb(msg);
         },
         error: function(xmlHttpRequest, err){
-            alert(error.toString());
-            $('#pInfo').text("删除失败！！！" + error.toString());
+            alert(err.toString());
+            $('#pInfo').text("删除失败！！！" + err.toString());
+        }
+    })
+};
+function getBatchFileCount(cb){
+    $.ajax({
+        method: 'POST',
+        url: './getBatchFileCount',
+        data:{},
+        success: function(msg){
+            cb(msg);
+        },
+        error: function(xmlHttpRequest, err){
+            alert(err.toString());
+            $('#pInfo').text("获取总数失败！！！" + err.toString());
         }
     })
 };
