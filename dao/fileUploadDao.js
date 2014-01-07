@@ -7,7 +7,7 @@ exports.insertBatch = function(fileName ,cb ){
 }
 exports.insertMail = function(mails ,cb ){
     if (mails.length == 0 ){
-        cb({"message":"数据为空"});
+        cb({"message":"数据为空,请检查数据编码格式"});
     }
     var str = "INSERT INTO `mailinfo` ( `mailAccount`, `mailCountry`, `mailWeight`, `packageId`, `batchId`) VALUES " ;
     for (var i = 0 ; i < mails.length ; i ++ ){

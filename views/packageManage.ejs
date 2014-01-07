@@ -114,7 +114,7 @@
                 if (msg.success == true) {
                     var count = msg.data ;
                     $('#totalCount').text(count + "条记录");
-                    $('#totalPage').text(parseInt(parseInt(count)/50 + 1).toString());
+                    $('#totalPage').text(parseInt(parseInt(count)/10 + 1).toString());
                 }
                 else if(msg.success == false){
                     $("#pInfo").text(msg.data);
@@ -129,7 +129,7 @@
                 var now = parseInt($('#nowPage').text());
                 var totalPage = parseInt($('#totalPage').text());
                 if (now < totalPage){
-                    getIndexInfo(50*now, 50);
+                    getIndexInfo(10*now, 10);
                     $('#nowPage').text((now+1).toString());
                 }
             });
@@ -137,11 +137,11 @@
                 e.stopPropagation();
                 var now = parseInt($('#nowPage').text());
                 if (now > 1){
-                    getIndexInfo(50*(now-2), 50);
+                    getIndexInfo(10*(now-2), 10);
                     $('#nowPage').text((now-1).toString());
                 }
             })
-            getIndexInfo(0, 50);
+            getIndexInfo(0, 10);
             getTablePageInfo();
         });
     </script>
